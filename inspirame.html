@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aimer Case Study</title>
+    <link rel="stylesheet" href="casestudies.css" />
+    <style>
+        @font-face {font-family: Clash Grotesk; src: url('ClashGrotesk_Complete/Fonts/TTF/ClashGrotesk-Variable.ttf');} 
+        p {
+            font-family: Clash Grotesk, sans-serif;
+            color: #28282B;
+        }
+        @font-face {font-family: Chillax; src: url('Chillax_Complete/Fonts/TTF/Chillax-Variable.ttf');} 
+        *:not(p) {
+            font-family: Chillax, sans-serif;
+            color: #28282B;
+        }
+    </style>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar for larger screens -->
+    <nav>
+        <a href="index.html" id="navbar__logo"><img src="images/logo.svg" alt="celine's logo"></a>
+        <a href="index.html">Works</a>
+        <a href="aboutme.html">About</a>
+        <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+    </nav>
+
+    <!-- Navigation Bar for smaller screens -->
+    <div class="navbar-mobile">
+        <!-- Logo on the left -->
+        <a href="index.html" class="navbar-bubble logo">
+            <img src="images/logo.svg" alt="celine's logo">
+        </a>
+
+        <!-- Hamburger menu on the right -->
+        <div class="navbar-bubble hamburger-menu">
+            <img src="images/hamburger menu.svg" alt="Menu">
+        </div>
+    </div>
+
+    <!-- Dropdown menu for mobile (Initially hidden) -->
+    <div class="nav-links-mobile">
+        <div class="works-bubble">
+            <a href="index.html">Works</a>
+        </div>
+        <div class="about-bubble">
+            <a href="aboutme.html">About</a>
+        </div>
+        <div class="resume-bubble">
+            <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+        </div>
+    </div>
+
+    <!-- Modal for Image Zoom with Bottom Nav -->
+    <div id="image-modal" class="image-modal">
+        <!-- Close Button -->
+        <span class="close-modal">&times;</span>
+
+        <!-- Image Displayed in the Modal -->
+        <img id="modal-img" class="modal-content">
+
+        <!-- Left and Right Navigation Arrows -->
+        <div class="nav-arrow left-arrow">&lt;</div>
+        <div class="nav-arrow right-arrow">&gt;</div>
+
+        <!-- Bottom Navigation Bar for Other Images -->
+        <div class="bottom-nav">
+            <div class="scrollable-nav">
+                <!-- All zoomable images will go here dynamically from JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Left Navigation Bar for Sections -->
+    <div class="left-nav">
+        <ul>
+            <li><a href="#case-info">Context</a></li>
+            <li><a href="#internship">Internship</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#learnings">Learnings</a></li>
+        </ul>
+    </div>
+     
+    <!-- Case Study Info -->
+    <img src="images/tecoadmin_case_study/tecoadmincoverimage.png" class="cover">
+    <section id="case-info" class="case-info section container">
+        <div class="info">
+            <h1>Team</h1>
+            <p>Maggie Chan</p>
+            <p>Nadia Corral</p>
+            <p>Kyle Qi</p>
+        </div>
+        <div class="info">
+            <h1>Tools</h1>
+            <p>Figma</p>
+            <p>Slack</p>
+            <p>Google Workspace</p>
+        </div>
+        <div class="info">
+            <h1>Timeline</h1>
+            <p>May - December 2023 (Remote)</p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="internship" class="internship section container">
+        <h1>Internship</h1>
+        <p>During Summer and Fall of 2023, I got the opportunity to intern as a Product Designer at Inspirame.  My 7 month long internship project revolved around researching, designing, and prototyping analytics and management tools for TecoAdmin (Inspirame’s platform for business partners and school administrators).</p>
+    </section>
+
+    <section id="experience" class="experience section container">
+        <h1>Experience</h1>
+        <p>I got to work closely with my mentor to develop project specs and set goals. I started with audits and initial research and began working on the design system and notifications and a task management system. I worked closely with my interns to develop the design system and provide design critiques. I got to hold  user testing sessions with my interns and incorporated user feedback into new designs.</p>
+    </section>
+
+    <!-- Final Reflections Section -->
+    <section id="learnings" class="learnings section container">
+        <h1>Learnings</h1>
+        <p>This internship taught be a lot about the product development life cycle, asking the right questions, how to plan research studies and analyze feedback,  and to explore as much ideas as you can before settling.</p>
+        <p>
+            All of my work during the internship is under an NDA, so please contact me personally if you have any
+            questions regarding my work.</p>
+    </section>
+    <section class="finisher section container">
+        <h1>Thank you so much for reading! 😁</h1>
+        <h1 class="thin">For more work inquiries or to have a coffee chat, please email me at <a href="mailto:celinenguy03@gmail.com">celinenguy03@gmail.com</a>! 🍵</h1>
+    </section>
+
+    <!-- You May Also Like Section -->
+    <section class="you-may-like section container">
+        <h1>You May Also Like...</h1>
+        <div class="related-links">
+            <div class="related-item">
+                <a href="aimer.html"> <!-- Link to Aimer case study -->
+                    <img src="images/aimer link.png" alt="Aimer App" class="case-img sol">
+                </a>
+            </div>
+            <div class="related-item">
+                <a href="miac.html"> <!-- Link to MIAC case study -->
+                    <img src="images/miac link.png" alt="MIAC Website Redesign" class="case-img sol">
+                </a>
+            </div>
+            <div class="related-item">
+                <a href="dlab.html"> <!-- Link to Design Lab case study -->
+                    <img src="images/dlab link.png" alt="Design Lab Instruction Set" class="case-img sol">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button Container with Bubble Container -->
+    <div id="backToTop-container">
+        <button id="backToTop">back to the top</button>
+
+        <!-- SVG Bubble Container for the Button -->
+        <div id="button-bubble-container">
+            <img class="button-left-bubble" src="images/bluebubble1.svg" alt="Bubble Left">
+            <img class="button-left-bubble" src="images/orangebubble1.svg" alt="Bubble Left">
+            <img class="button-left-bubble" src="images/pinkbubble1.svg" alt="Bubble Left">
+
+            <img class="button-right-bubble" src="images/orangebubble1.svg" alt="Bubble Right">
+            <img class="button-right-bubble" src="images/pinkbubble1.svg" alt="Bubble Right">
+            <img class="button-right-bubble" src="images/bluebubble1.svg" alt="Bubble Right">
+        </div>
+    </div>
+
+    <footer>
+        <hr> <!-- Horizontal line at the top -->
+    
+        <div class="footer-container">
+            <!-- Left Section: Designed and coded by -->
+            <div class="left-footer">
+                <p>designed and coded by celine nguyen</p>
+            </div>
+    
+            <!-- Center Section: Contact me and icons -->
+            <div class="center-footer">
+                <h1>contact me!</h1>
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/celine-nguyen-154291229/" target="_blank" aria-label="LinkedIn">
+                        <img src="images/linkedinlogo.svg" alt="LinkedIn Icon">
+                    </a>
+                    <a href="mailto:celinenguy03@gmail.com" aria-label="Email">
+                        <img src="images/emaillogo.svg" alt="Email Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Link to the external app.js file -->
+    <script src="casestudies.js"></script>
+</body>
+</html>

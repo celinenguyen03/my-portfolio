@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aimer Case Study</title>
+    <link rel="stylesheet" href="casestudies.css" />
+    <style>
+        @font-face {font-family: Clash Grotesk; src: url('ClashGrotesk_Complete/Fonts/TTF/ClashGrotesk-Variable.ttf');} 
+        p {
+            font-family: Clash Grotesk, sans-serif;
+            color: #28282B;
+        }
+        @font-face {font-family: Chillax; src: url('Chillax_Complete/Fonts/TTF/Chillax-Variable.ttf');} 
+        *:not(p) {
+            font-family: Chillax, sans-serif;
+            color: #28282B;
+        }
+    </style>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar for larger screens -->
+    <nav>
+        <a href="index.html" id="navbar__logo"><img src="images/logo.svg" alt="celine's logo"></a>
+        <a href="index.html">Works</a>
+        <a href="aboutme.html">About</a>
+        <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+    </nav>
+
+    <!-- Navigation Bar for smaller screens -->
+    <div class="navbar-mobile">
+        <!-- Logo on the left -->
+        <a href="index.html" class="navbar-bubble logo">
+            <img src="images/logo.svg" alt="celine's logo">
+        </a>
+
+        <!-- Hamburger menu on the right -->
+        <div class="navbar-bubble hamburger-menu">
+            <img src="images/hamburger menu.svg" alt="Menu">
+        </div>
+    </div>
+
+    <!-- Dropdown menu for mobile (Initially hidden) -->
+    <div class="nav-links-mobile">
+        <div class="works-bubble">
+            <a href="index.html">Works</a>
+        </div>
+        <div class="about-bubble">
+            <a href="aboutme.html">About</a>
+        </div>
+        <div class="resume-bubble">
+            <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+        </div>
+    </div>
+
+    <!-- Modal for Image Zoom with Bottom Nav -->
+    <div id="image-modal" class="image-modal">
+        <!-- Close Button -->
+        <span class="close-modal">&times;</span>
+
+        <!-- Image Displayed in the Modal -->
+        <img id="modal-img" class="modal-content">
+
+        <!-- Left and Right Navigation Arrows -->
+        <div class="nav-arrow left-arrow">&lt;</div>
+        <div class="nav-arrow right-arrow">&gt;</div>
+
+        <!-- Bottom Navigation Bar for Other Images -->
+        <div class="bottom-nav">
+            <div class="scrollable-nav">
+                <!-- All zoomable images will go here dynamically from JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Left Navigation Bar for Sections -->
+    <div class="left-nav">
+        <ul>
+            <li><a href="#case-info">Context</a></li>
+            <li><a href="#problem">Problem</a></li>
+            <li><a href="#solution">Solution</a></li>
+            <li><a href="#wpr">Research</a></li>
+            <li><a href="#mi">Main Insights</a></li>
+            <li><a href="#ti">Testing & Iterations</a></li>
+            <li><a href="#fd">Final Designs</a></li>
+            <li><a href="#prototype">Prototype</a></li>
+            <li><a href="#rp">Research Poster</a></li>
+            <li><a href="#reflections">Reflections</a></li>
+        </ul>
+    </div>
+     
+    <!-- Case Study Info -->
+    <img src="images/dlab_case_study/dlabcoverimage.png" class="cover">
+    <section id="case-info" class="case-info section container">
+        <div class="info">
+            <h1>Team</h1>
+            <p>Jessica DeSouza</p>
+            <p>Ava Fascetti</p>
+        </div>
+        <div class="info">
+            <h1>Tools</h1>
+            <p>Figma</p>
+            <p>Slack</p>
+            <p>Google Workspace</p>
+        </div>
+        <div class="info">
+            <h1>Timeline</h1>
+            <p>October 2023 - June 2024</p>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="rar" class="rar section container">
+        <h1>Role and Responsibilities</h1>
+        <p>I was placed in a lab to conduct research on pupillometry for Alzheimer’s under my two mentors. A previous project on using the FarRed spectrum to be used for pupillometry led my team to devise a way of implementing the method. I was tasked to develop an instruction set linked by a QR code to assist patients with self-diagnosing cognitive disorders.</p>
+    </section>
+    <section id="problem" class="problem section container">
+        <h2>Problem</h2>
+        <h1>Accessibility to pupillometry is limited</h1>
+        <p>Pupillometry is a powerful tool that gives us insights on cognitive processes, but isn’t inclusive of low socioeconomic statuses, low technology literacy, and non-white ethnicities. My lab discovered a novel method, FarRed, for making pupillometry effective on any eye color, but there was still the issue of making this method accessible to patients.</p>
+        <img src="images/dlab_case_study/problemhmw.png" class="case-img zoomable">
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="solution section container">
+        <h2>Solution</h2>
+        <h1>Smartphones are key</h1>
+        <div class="solution-steps">
+            <div class="gif-cont">
+                <img src="images/dlab_case_study/dlabsolution.gif" alt="Step 1 Image" class="gif zoomable">
+                <img src="images/dlab_case_study/sol1.png" alt="Step 1 Image" class="sol zoomable">
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="wpr" class="wpr section container">
+        <h2>White Paper Research</h2>
+        <h1>Pupillometers are expensive</h1>
+        <p>Starting with research on the problem space, I began to understand a lot more about the limitations and potential of pupillometry from the <a href="https://www.nature.com/articles/s41598-023-40796-0#Sec2" class="plink">scientific reports by Colin Barry and Dr. Edward Wang.</a></p>
+        <img src="images/dlab_case_study/wpr.png" alt="Scientific Report Finding" class="case-img sol zoomable">
+    </section>
+
+    <section id="mi" class="mi section container">
+        <h2>Main Insights</h2>
+        <h1>At-home testing should use tools that patients already have</h1>
+        <p>From the exploration done on recent breakthroughs, we noticed that pupillometers should be inexpensive and allow users to use minimal equipment. An instruction set that makes use of the phone to help patients create their own pupillometer whilst also guiding them on how to attach it to their RGB camera would be cost-effective way of implementing pupillometry at home.</p>
+        <img src="images/dlab_case_study/oilboard pupillometer.png" alt="Takeaways from Research" class="case-img sol zoomable">
+    </section>
+
+    <!-- Design Section -->
+    <section id="ti" class="ti section container">
+        <h2>Testing and Iterations</h2>
+        <h1>3 major improvements in my design</h1>
+        <p>Based on feedback from 10 potential users and mentor feedback, I iterated over my design over the span of 2 weeks with 3 major improvements:</p>
+        <img src="images/dlab_case_study/ti1.png" alt="Design Change 1" class="case-img sol zoomable">
+        <img src="images/dlab_case_study/ti2.png" alt="Design Change 2" class="case-img sol zoomable">
+        <img src="images/dlab_case_study/ti3.png" alt="Design Change 3" class="case-img sol zoomable">
+    </section>
+    <section id="fd" class="fd section container">
+        <h2>The Final Screens</h2>
+        <h1>The final product</h1>
+        <img src="images/dlab_case_study/fd.png" alt="4 Final Design Screens" class="case-img sol zoomable">
+    </section>
+    <section id="prototype" class="prototype section container">
+        <h1>Prototype</h1>
+        <iframe style="border: 1px solid rgba(255, 255, 255, 0.1);" width="100%" height="800" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F1g1j2uZkd1LmYRDmQ0MgI0%2FUsability-Testing-Screens%3Fpage-id%3D286%253A645%26node-id%3D286-674%26node-type%3Dcanvas%26viewport%3D1014%252C555%252C0.23%26t%3DqlP1mTGmi5qNKjgj-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26starting-point-node-id%3D286%253A674" allowfullscreen></iframe>
+    </section>
+    <section id="rp" class="rp section container">
+        <h2>Research Poster</h2>
+        <h1>Presenting at the MADURA Research Showcase</h1>
+        <p>After I finished iterating my designs, I got to present my work at a research showcase for healthcare related technology.</p>
+        <img src="images/dlab_case_study/Alzheimer's Project Poster.png" alt="Research Poster" class="case-img sol zoomable">
+    </section>
+
+    <!-- Final Reflections Section -->
+    <section id="reflections" class="final-reflections section container">
+        <h2>Conclusions and Lessons Learned</h2>
+        <h1>What I’d do differently next time</h1>
+        <img src="images/dlab_case_study/maduraprogram.JPG" alt="Research Poster" class="case-img sol zoomable">
+        <p class="pspace">This was my first time as a product designer with strong emphasis on research. I’m immensely grateful to have worked with my two mentors who guided me through the whole research process. On that note, here are a few things I’ve learned: </p>
+        <ol class="case-list">
+            <li><strong>Communication is important.</strong>  In the beginning of my time at the lab, I would miss a few important points from each meeting. Because of that, some things could’ve taken less time had I just ask additional questions over Slack rather than wait for in-person meetings for updates and feedback.</li>
+            <li><strong>Insights over process.</strong> Despite researching the topics and developing solutions I thought were good, I could’ve done a better job determining what parts of this project were more important and allocating my time to those rather than trying to do more than I could handle.</li>
+            <li><strong>You don’t need many words, you just need the right words.</strong> One of my biggest challenges was making sure that the instructions were clear and concise. Some of the wording didn’t do a good job helping users assemble the eyepiece without accompanying visuals. Working on conveying myself clearly and concisely is a trait I think is invaluable as a product designer that I aim to improve in the future.</li>
+        </ol>
+    </section>
+    <section class="finisher section container">
+        <h1>Thank you so much for reading! 😁</h1>
+        <h1 class="thin">For more work inquiries or to have a coffee chat, please email me at <a href="mailto:celinenguy03@gmail.com">celinenguy03@gmail.com</a>! 🍵</h1>
+    </section>
+
+    <!-- You May Also Like Section -->
+    <section class="you-may-like section container">
+        <h1>You May Also Like...</h1>
+        <div class="related-links">
+            <div class="related-item">
+                <a href="aimer.html"> <!-- Link to Aimer case study -->
+                    <img src="images/aimer link.png" alt="Aimer App" class="case-img sol">
+                </a>
+            </div>
+            <div class="related-item">
+                <a href="miac.html"> <!-- Link to MIAC case study -->
+                    <img src="images/miac link.png" alt="MIAC Website Redesign" class="case-img sol">
+                </a>
+            </div>
+            <div class="related-item">
+                <a href="inspirame.html"> <!-- Link to Inspirame case study -->
+                    <img src="images/inspirame link.png" alt="Inspirame Table Management" class="case-img sol">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button Container with Bubble Container -->
+    <div id="backToTop-container">
+        <button id="backToTop">back to the top</button>
+
+        <!-- SVG Bubble Container for the Button -->
+        <div id="button-bubble-container">
+            <img class="button-left-bubble" src="images/bluebubble1.svg" alt="Bubble Left">
+            <img class="button-left-bubble" src="images/orangebubble1.svg" alt="Bubble Left">
+            <img class="button-left-bubble" src="images/pinkbubble1.svg" alt="Bubble Left">
+
+            <img class="button-right-bubble" src="images/orangebubble1.svg" alt="Bubble Right">
+            <img class="button-right-bubble" src="images/pinkbubble1.svg" alt="Bubble Right">
+            <img class="button-right-bubble" src="images/bluebubble1.svg" alt="Bubble Right">
+        </div>
+    </div>
+
+    <footer>
+        <hr> <!-- Horizontal line at the top -->
+    
+        <div class="footer-container">
+            <!-- Left Section: Designed and coded by -->
+            <div class="left-footer">
+                <p>designed and coded by celine nguyen</p>
+            </div>
+    
+            <!-- Center Section: Contact me and icons -->
+            <div class="center-footer">
+                <h1>contact me!</h1>
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/celine-nguyen-154291229/" target="_blank" aria-label="LinkedIn">
+                        <img src="images/linkedinlogo.svg" alt="LinkedIn Icon">
+                    </a>
+                    <a href="mailto:celinenguy03@gmail.com" aria-label="Email">
+                        <img src="images/emaillogo.svg" alt="Email Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Link to the external app.js file -->
+    <script src="casestudies.js"></script>
+</body>
+</html>

@@ -1,0 +1,717 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: calc(1em + 0.5rem);
+}
+
+body {
+    background: #fff;
+    overflow-x: hidden;
+
+}
+
+/* Base Font Size */
+html {
+    font-size: 16px; /* Ensure the root font size is explicitly set to 16px */
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+}
+
+
+/* Navigation Bar */
+
+nav {
+    position: fixed;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%); /* Center the nav bar */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.45), rgba(212, 224, 238, 0.35));
+    border-radius: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0px 4px 18px rgba(255, 255, 255, 1);
+    backdrop-filter: blur(16px);
+    padding: 12px 32px;
+    z-index: 1000;
+}
+
+#navbar__logo img{
+    vertical-align: bottom;
+    width: 40px;
+    height: 40px;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+nav a:first-of-type {
+    margin-left: 0;
+}
+
+nav a:last-of-type {
+    margin-right: 0;
+}
+
+nav a:hover {
+    font-weight: 500;
+}
+
+/* Underline for hover */
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #28282B;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+/* Active page styling */
+nav a.active {
+    font-weight: 500; /* Bold the active link */
+}
+
+/* Underline for active link */
+nav a.active::after {
+    opacity: 1;
+}
+
+/* Hide the mobile menu on larger screens */
+.navbar-mobile, .nav-links-mobile {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    /* Hide the desktop navbar */
+    nav {
+        display: none;
+    }
+
+    /* Base styles for the mobile navbar */
+    .navbar-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 16px;
+        z-index: 999; /* Keep it above other content */
+    }
+
+    /* Styles for the bubble container around each element */
+    .navbar-bubble {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.45), rgba(212, 224, 238, 0.35));
+        border: 1px rgba(255, 255, 255, 0.1);
+        box-shadow: inset 0px 4px 18px rgba(255, 255, 255, 1);
+        backdrop-filter: blur(16px);
+    }
+
+    /* Adjust the logo inside the bubble */
+    .navbar-bubble.logo img {
+        width: 40px;
+        height: auto;
+    }
+
+    /* Adjust the hamburger menu inside the bubble */
+    .navbar-bubble.hamburger-menu img {
+        width: 40px;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.5s ease; /* Smooth rotation */
+    }
+
+    /* Rotate the hamburger menu on click */
+    .hamburger-menu.active img {
+        transform: rotate(360deg);
+    }
+
+    /* Dropdown menu for mobile (hidden by default) */
+    .nav-links-mobile {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 70px;
+        right: 16px;
+        padding-top: 16px;
+        z-index: 999;
+    }
+
+    .nav-links-mobile.active {
+        display: flex;
+    }
+
+    .works-bubble,
+    .about-bubble,
+    .resume-bubble {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 32px;
+        border-radius: 999px; /* Pill-shaped bubbles */
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.45), rgba(212, 224, 238, 0.35));
+        border: 1px rgba(255, 255, 255, 0.1);
+        box-shadow: inset 0px 4px 18px rgba(255, 255, 255, 1);
+        backdrop-filter: blur(16px);
+        transition: all 0.3s ease;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+
+    /* Style for the individual links inside bubbles */
+    .nav-links-mobile a {
+        text-decoration: none;
+        font-size: 1.25rem;
+        color: #28282B;
+        font-weight: 400; /* Normal weight */
+    }
+
+    /* Change the font-weight when pressing on the links */
+    .nav-links-mobile a:active {
+        font-weight: 500; /* Bold weight on press */
+    }
+}
+
+/* Hero Section */
+.hero-section{
+    height: 100vh;
+}
+
+/* Hero Text */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.hero-text .char {
+    transform: translateY(115px);
+    transition: transform 0.5s;
+}
+
+.hero-text h1 {
+    font-size: 5.5rem;
+    margin-bottom: 24px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 5rem;
+}
+
+.hero-text p {
+    font-size: 2rem;
+    color: #28282B;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.hero-text .chat {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #28282B;
+    text-decoration: none;
+    position: relative;
+    align-self: flex-start;
+    display: inline-block;
+    padding: 12px 32px;
+    margin-top: 24px;
+    border-radius: 32px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.hero-text a.chat span {
+    font-weight: 500;
+    z-index: 1;
+    position: relative;
+}
+
+.chat {
+    position: relative;
+}
+
+.pink{
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 2.5em;
+    background: linear-gradient(to bottom, rgba(242, 99, 152, 1), rgba(250, 28, 255, 0.5));
+    border: 1px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0px 4px 18px rgba(255, 255, 255, 1);
+    backdrop-filter: blur(16px);
+    position: absolute;
+    top: 50%;
+    left: -0.25em;
+    transform: translatey(-50%);
+}
+
+span {
+    position: relative;
+}
+
+@media (max-width: 800px) {
+    .hero-text h1 {
+        font-size: 5rem;
+    }
+
+    .works-top h1 {
+        font-size: 5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.5rem;
+    }
+
+    #works-title{
+        font-size: 5rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .hero-text h1 {
+        font-size: 4rem;
+    }
+
+    #works-title{
+        font-size: 4rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+        text-align: center; /* Center align text */
+        display: block;
+        line-height: 1.2;
+    }
+
+    .hero-text p {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+    }
+
+    .hero-text a.chat {
+        margin: 16px auto;
+    }
+
+    .hero-text .chat {
+        font-size: 1.5rem;
+    }
+
+    #works-title{
+        font-size: 4rem;
+        text-align: justify;
+        text-align-last: center;
+        display: block;
+        width: 100%;
+        padding-left: 0;
+    }
+
+}
+
+/* Bubbles */
+
+.bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.bubbles img {
+    position: absolute;
+    user-select: none;
+}
+
+.ob1, .pb1, .bb1, .ob2, .pb2, .bb2 {
+    position: absolute;
+    transform: translateY(0); /* Ensure this starts at the initial Y position */
+    will-change: transform;
+}
+
+.ob1 {
+    left: 10%;
+    top: 40%;
+}
+
+.pb1 {
+    left: 20%;
+    top: 10%;
+} 
+
+.bb1 {
+    left: 45%;
+    top: 20%;
+}
+
+.ob2 {
+    left: 70%;
+    top: 50%;
+}
+
+.pb2 {
+    left: 72%;
+    top: -25%;
+}
+
+.bb2 {
+    left: 95%;
+    top: 20%;
+}
+
+@media (max-width: 1400px) {
+    .bb2 {
+        display: none;
+    }
+}
+
+@media (max-width: 1080px) {
+    .ob2{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .pb1 {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .bb2, .pb1 {
+        display: block;
+    }
+    .bb1, .pb2 {
+        display: none;
+    }
+}
+
+.scroll-down-arrow {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+/* Works Section */
+
+.works {
+    margin-top: 64px;
+}
+
+.works h1 {
+    font-size: 5.5rem;
+    margin-bottom: 40px;
+    text-align: left;
+    padding-left: 10%;
+}
+
+.works-top{
+    position: relative;
+}
+
+.svg-container {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.burst-svg {
+    position: absolute;
+    opacity: 0;
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    transform-origin: center center;
+}
+
+.works-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(528px, 1fr));
+    grid-gap: 32px;
+    justify-content: center;
+    max-width: 1088px;
+    margin: 0 auto;
+}
+
+.work-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 32px;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 528px;
+    min-width: 320px;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    height: auto;
+    margin: 0 auto;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.work-card:hover {
+    box-shadow: 0px 24px 40px rgba(0, 0, 0, 0.5);
+}
+
+.work-card img {
+    width: 100%;
+    height: 396px;
+    object-fit: cover;
+}
+
+.work-content {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.work-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.work-content p {
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+}
+
+.work-date {
+    font-size: 0.9rem;
+    color: #888;
+    display: block;
+    margin-top: 10px;
+}
+
+@media (max-width: 1400px) {
+    .works-container {
+        grid-template-columns: repeat(2, 440px); /* Two fixed-width columns */
+        grid-gap: 32px; /* Maintain the gap */
+        margin: 0 auto; /* Center the container */
+    }
+}
+
+@media (max-width: 940px) {
+    .works-container {
+        grid-template-columns: 1fr; /* Single column */
+        grid-gap: 32px; /* Maintain the gap */
+        margin: 0 auto;
+    }
+
+    .work-card {
+        margin: 0 auto; /* Center the cards */
+    }
+
+}
+
+@media (max-width: 640px) {
+    .works-container {
+        grid-template-columns: repeat(1, 440px); /* Single column */
+        grid-gap: 32px; /* Maintain the gap */
+        margin: 0 auto;
+    }
+
+    .work-card {
+        margin: 0 auto; /* Center the cards */
+    }
+
+    .work-content h2 {
+        font-size: 1.2rem; /* Further reduce font size */
+    }
+
+    .work-content p {
+        font-size: 1rem;
+    }
+
+    .work-date {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 479px) {
+    .works-container {
+        grid-template-columns: 1fr; /* Single column */
+        grid-gap: 16px; /* Smaller gap for mobile */
+        margin: 0 8px; /* Smaller margin to fit the screen */
+    }
+
+    .work-card {
+        margin: 0 auto; /* Center the cards */
+    }
+
+    .work-card img {
+        height: 250px; /* Adjust image height for smaller screens */
+    }
+}
+
+#backToTop-container {
+    position: relative;
+    display: block;
+    margin: 128px auto 0 auto;
+    width: fit-content;
+}
+
+#backToTop {
+    display: inline-block;
+    padding: 12px 32px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #28282B;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+#button-bubble-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.button-left-bubble, .button-right-bubble {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+}
+
+.button-left-bubble {
+    left: -40px; /* Move it relative to the left of the button */
+}
+
+.button-right-bubble {
+    right: -40px; /* Move it relative to the right of the button */
+}
+
+/* Footer */
+
+footer {
+    padding: 64px 64px;
+    text-align: center;
+    position: relative; /* Parent container to allow absolute positioning */
+}
+
+footer hr {
+    border: none;
+    border-top: 1px solid #28282B;
+    margin-bottom: 40px;
+}
+
+.footer-container {
+    position: relative;
+    width: 100%;
+    height: 120px;
+}
+
+.left-footer {
+    position: absolute;
+    left: 0;
+    padding-left: 24px;
+    text-align: left;
+}
+
+.center-footer {
+    position: absolute;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Shift by 50% of the element's width to center */
+    text-align: center;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 24px;
+}
+
+.footer-icons a {
+    margin: 0;
+}
+
+.footer-icons img {
+    width: 40px;
+    height: 40px;
+    transition: filter 0.3s ease;
+}
+
+@media (max-width: 940px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto; /* Adjust height for vertical layout */
+    }
+
+    .left-footer {
+        position: static; /* Remove absolute positioning */
+        text-align: center; /* Center the text */
+        padding: 0; /* Reset padding */
+        margin-bottom: 20px; /* Add space below */
+    }
+
+    .center-footer {
+        position: static; /* Remove absolute positioning */
+        transform: none; /* Remove the translateX */
+        text-align: center; /* Keep the text centered */
+    }
+
+    .footer-icons {
+        margin-top: 16px; /* Adjust spacing above icons */
+    }
+}

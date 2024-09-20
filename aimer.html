@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aimer Case Study</title>
+    <link rel="stylesheet" href="casestudies.css" />
+    <style>
+        @font-face {font-family: Clash Grotesk; src: url('ClashGrotesk_Complete/Fonts/TTF/ClashGrotesk-Variable.ttf');} 
+        p {
+            font-family: Clash Grotesk, sans-serif;
+            color: #28282B;
+        }
+        @font-face {font-family: Chillax; src: url('Chillax_Complete/Fonts/TTF/Chillax-Variable.ttf');} 
+        *:not(p) {
+            font-family: Chillax, sans-serif;
+            color: #28282B;
+        }
+    </style>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar for larger screens -->
+    <nav>
+        <a href="index.html" id="navbar__logo"><img src="images/logo.svg" alt="celine's logo"></a>
+        <a href="index.html">Works</a>
+        <a href="aboutme.html">About</a>
+        <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+    </nav>
+
+    <!-- Navigation Bar for smaller screens -->
+    <div class="navbar-mobile">
+        <!-- Logo on the left -->
+        <a href="index.html" class="navbar-bubble logo">
+            <img src="images/logo.svg" alt="celine's logo">
+        </a>
+
+        <!-- Hamburger menu on the right -->
+        <div class="navbar-bubble hamburger-menu">
+            <img src="images/hamburger menu.svg" alt="Menu">
+        </div>
+    </div>
+
+    <!-- Dropdown menu for mobile (Initially hidden) -->
+    <div class="nav-links-mobile">
+        <div class="works-bubble">
+            <a href="index.html">Works</a>
+        </div>
+        <div class="about-bubble">
+            <a href="aboutme.html">About</a>
+        </div>
+        <div class="resume-bubble">
+            <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+        </div>
+    </div>
+
+    <!-- Modal for Image Zoom with Bottom Nav -->
+    <div id="image-modal" class="image-modal">
+        <!-- Close Button -->
+        <span class="close-modal">&times;</span>
+
+        <!-- Image Displayed in the Modal -->
+        <img id="modal-img" class="modal-content">
+
+        <!-- Left and Right Navigation Arrows -->
+        <div class="nav-arrow left-arrow">&lt;</div>
+        <div class="nav-arrow right-arrow">&gt;</div>
+
+        <!-- Bottom Navigation Bar for Other Images -->
+        <div class="bottom-nav">
+            <div class="scrollable-nav">
+                <!-- All zoomable images will go here dynamically from JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Left Navigation Bar for Sections -->
+    <div class="left-nav">
+        <ul>
+            <li><a href="#case-info">Context</a></li>
+            <li><a href="#problem">Problem</a></li>
+            <li><a href="#solution">Solution</a></li>
+            <li><a href="#wpr">Research</a></li>
+            <li><a href="#ca">Competitive Analysis</a></li>
+            <li><a href="#ui">User Interviews</a></li>
+            <li><a href="#mi">Main Insights</a></li>
+            <li><a href="#designs">Designs</a></li>
+            <li><a href="#ti">Testing & Iterations</a></li>
+            <li><a href="#fd">Final Designs</a></li>
+            <li><a href="#prototype">Prototype</a></li>
+            <li><a href="#style-guide">Style Guide</a></li>
+            <li><a href="#reflections">Reflections</a></li>
+        </ul>
+    </div>
+     
+    <!-- Case Study Info -->
+    <img src="images/aimer_case_study/aimercoverimage.png" class="cover">
+    <section id="case-info" class="case-info section container">
+        <div class="info">
+            <h1>Type</h1>
+            <p>Personal</p>
+        </div>
+        <div class="info">
+            <h1>Tools</h1>
+            <p>Figma</p>
+            <p>Miro</p>
+            <p>Google Workspace</p>
+        </div>
+        <div class="info">
+            <h1>Timeline</h1>
+            <p>August - September 2024</p>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="problem section container">
+        <h2>Problem</h2>
+        <h1>Gamers do not have a steady career in gaming</h1>
+        <p>As a competitive gamer, I’ve noticed how many of my fellow gamers excel at certain games, achieving top ranks and even picking up streaming as a hobby. However, they choose to pursue other careers because a career in gaming isn’t stable. This sparked the question: how can we help people who enjoy gaming pursue it professionally?</p>
+        <img src="images/aimer_case_study/problemhmw.png" class="case-img zoomable">
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="solution section container">
+        <h2>Solution</h2>
+        <h1>Introducing Aimer: your AI-powered career builder.</h1>
+        <div class="solution-steps">
+            <div class="gif-cont">
+                <img src="images/aimer_case_study/goalsettingsolution.gif" alt="Step 1 Image" class="gif zoomable">
+                <img src="images/aimer_case_study/sol1.png" alt="Step 1 Image" class="sol zoomable">
+            </div>
+            <div class="gif-cont">
+                <img src="images/aimer_case_study/sol2.png" alt="Step 2 Image" class="sol zoomable">
+                <img src="images/aimer_case_study/streamsolution.gif" alt="Step 2 Image" class="gif zoomable">
+            </div>
+            <div class="gif-cont">
+                <img src="images/aimer_case_study/jobboardsolution.gif" alt="Step 3 Image" class="gif zoomable">
+                <img src="images/aimer_case_study/sol3.png" alt="Step 3 Image" class="sol zoomable">
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="wpr" class="wpr section container">
+        <h2>White Paper Research</h2>
+        <h1>Over a million people worldwide play games</h1>
+        <p>Kicking off this project, I began to investigate the amount of people who gaming impacts, when I came across an a surprising statistic from <a href="https://activeplayer.io/league-of-legends/?source=sidebar" class="plink">ActivePlayer.io:</a></p>
+        <img src="images/aimer_case_study/wpr.png" alt="Player Count Graphic" class="case-img sol zoomable">
+    </section>
+
+    <section id="ca" class="ca section container">
+        <h2>Competitive Analysis</h2>
+        <h1>There are NO clear paths for a career in gaming</h1>
+        <p>With that number in mind, I analyzed 3 popular apps for monetization gaming and found that there were virtually no products out there that streamlined the monetization part of gaming. This opportunity became the basis of my solution.</p>
+        <img src="images/aimer_case_study/ca.png" alt="3 Platforms Used For Competitive Analysis" class="case-img sol zoomable">
+    </section>
+
+    <section id="ui" class="ui section container">
+        <h2>User Interviews</h2>
+        <h1>A majority of my interviewees would NOT consider gaming as a viable career</h1>
+        <p class="pspace">I wanted to see if I was missing any possible alternatives to a career in gaming, so I conducted user interviews with 5 skilled gamers who are currently pursuing a different career. I asked these questions to find out all the options that are out there and how they felt about the industry as a whole, which I then organized into affinity mapping.</p>
+        <p>Research Questions</p>
+        <ul class="case-list">
+            <li>What can someone who is interested in gaming do to earn money in that field?</li>
+            <li>If you could do anything you wanted to do for a career, what would you do and why?</li>
+            <li>Would you consider a career in gaming? Why?</li>
+            <li>What are your plans for the future career-wise?</li>
+            <li>If gaming was more sustainable, would you consider it as a viable career option?</li>
+        </ul>
+        <img src="images/aimer_case_study/Affinity Diagram for Aimer.jpg" alt="Affinity Mapping" class="case-img sol zoomable">
+    </section>
+
+    <section id="mi" class="mi section container">
+        <h2>Main Insights</h2>
+        <h1>The options that are there are unclear and difficult</h1>
+        <p>Based on the trends in my affinity mapping, I’ve noticed that there are 3 main ways to make a living through gaming, and none them are stable and/or are very difficult to break into. Below are the analyses for my interviews.</p>
+        <img src="images/aimer_case_study/mi.png" alt="3 Main Takeaways from Research" class="case-img sol zoomable">
+    </section>
+
+    <!-- Design Section -->
+    <section id="designs" class="designs section container">
+        <h2>Designs</h2>
+        <h1>Setbacks and product direction alignment</h1>
+        <p>After conducting the interviews, I realized that there were a lot of things that were many ways to tackle this problem. I spent 2 weeks exploring various features that I could’ve addressed in my app. There were many things to consider, different user types, compatibility with other products, and personalized coaching. However, I couldn’t tackle everything at once and had to narrow down the options for the initial launch, with additional features being put on low-priority for future implementation.</p>
+    </section>
+    <section id="ti" class="ti section container">
+        <h2>Testing and Iterations</h2>
+        <h1>3 data-driven improvements in my designs</h1>
+        <p>Based on feedback from 2 other peers and 3 of the previous interviewees, I continuously iterated over my designs across the timespan of 2 weeks and developed 3 major improvements:</p>
+        <img src="images/aimer_case_study/ti1.png" alt="Design Change 1" class="case-img sol zoomable">
+        <img src="images/aimer_case_study/ti2.png" alt="Design Change 2" class="case-img sol zoomable">
+        <img src="images/aimer_case_study/ti3.png" alt="Design Change 3" class="case-img sol zoomable">
+    </section>
+    <section id="fd" class="fd section container">
+        <h2>Final Designs</h2>
+        <h1>The Initial Launch Screens</h1>
+        <img src="images/aimer_case_study/fd.png" alt="5 Final Design Screens" class="case-img sol zoomable">
+    </section>
+    <section id="prototype" class="prototype section container">
+        <h1>Prototype</h1>
+        <iframe style="border: 1px solid rgba(255, 255, 255, 0.1);" width="100%" height="800" src="https://embed.figma.com/proto/GT1GNE9QT66PydmmQL19YG/Aimer?page-id=838%3A2550&node-id=838-11309&node-type=frame&viewport=-1265%2C670%2C0.14&scaling=scale-down&content-scaling=fixed&starting-point-node-id=838%3A11309&embed-host=share" allowfullscreen></iframe>
+    </section>
+    <section id="style-guide" class="style-guide section container">
+        <h1>Style Guide</h1>
+        <img src="images/aimer_case_study/styleguide.png" alt="Style Guide" class="case-img sol zoomable">
+    </section>
+
+    <!-- Final Reflections Section -->
+    <section id="reflections" class="final-reflections section container">
+        <h2>Reflections</h2>
+        <h1>Final Reflections and future plans</h1>
+        <p class="pspace">This was my favorite UX project! I’m so happy to have developed this project as it taught me a lot about the design process. Here are some of the key points I’ve learned from this project</p>
+        <ol class="case-list">
+            <li><strong>Prioritize the happy path first.</strong> Initially, there were many users I had in mind for who would use this product. Thinking about how I could cater each individuals experiences to the app was overwhelming and it was easier to develop the product with the main user in mind first, and then the other use cases should come a lot easier.</li>
+            <li><strong>Don’t limit yourself to a few solutions.</strong> There were SO many ideas I had, ranging from developing a coaching feature and incorporating a tournament feature onto the platforms. I definitely didn’t expect Aimer to look how it does now, but I pushed myself to narrow down the most important aspects that were needed that I felt best solved this problem.</li>
+            <li><strong>Tradeoffs are important for every decision.</strong> I really wanted this app to have a personalized touch to make it feel like every user has someone who can help them and truly understand their situation. But given the scope of the potential users being in the millions, I’ve employed AI as that figure who users can look towards for guidance. Leveraging current advancements in technology are important and making sure that I communicate the tradeoffs at every step is crucial to be a good designer.</li>
+        </ol>
+    </section>
+    <section class="finisher section container">
+        <h1>Thank you so much for reading! 😁</h1>
+        <h1 class="thin">For more work inquiries or to have a coffee chat, please email me at <a href="mailto:celinenguy03@gmail.com">celinenguy03@gmail.com</a>! 🍵</h1>
+    </section>
+
+    <!-- You May Also Like Section -->
+    <section class="you-may-like section container">
+        <h1>You May Also Like...</h1>
+        <div class="related-links">
+            <div class="related-item">
+                <a href="miac.html"> <!-- Link to MIAC case study -->
+                    <img src="images/miac link.png" alt="MIAC Website Redesign" class="case-img sol">
+                </a>
+            </div>
+            <div class="related-item">
+                <a href="dlab.html"> <!-- Link to Design Lab case study -->
+                    <img src="images/dlab link.png" alt="Design Lab Instruction Set" class="case-img sol">
+                </a>
+            </div>
+            <div class="related-item">
+                <a href="inspirame.html"> <!-- Link to Inspirame case study -->
+                    <img src="images/inspirame link.png" alt="Inspirame Table Management" class="case-img sol">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button Container with Bubble Container -->
+    <div id="backToTop-container">
+        <button id="backToTop">back to the top</button>
+
+        <!-- SVG Bubble Container for the Button -->
+        <div id="button-bubble-container">
+            <img class="button-left-bubble" src="images/bluebubble1.svg" alt="Bubble Left">
+            <img class="button-left-bubble" src="images/orangebubble1.svg" alt="Bubble Left">
+            <img class="button-left-bubble" src="images/pinkbubble1.svg" alt="Bubble Left">
+
+            <img class="button-right-bubble" src="images/orangebubble1.svg" alt="Bubble Right">
+            <img class="button-right-bubble" src="images/pinkbubble1.svg" alt="Bubble Right">
+            <img class="button-right-bubble" src="images/bluebubble1.svg" alt="Bubble Right">
+        </div>
+    </div>
+
+    <footer>
+        <hr> <!-- Horizontal line at the top -->
+    
+        <div class="footer-container">
+            <!-- Left Section: Designed and coded by -->
+            <div class="left-footer">
+                <p>designed and coded by celine nguyen</p>
+            </div>
+    
+            <!-- Center Section: Contact me and icons -->
+            <div class="center-footer">
+                <h1>contact me!</h1>
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/celine-nguyen-154291229/" target="_blank" aria-label="LinkedIn">
+                        <img src="images/linkedinlogo.svg" alt="LinkedIn Icon">
+                    </a>
+                    <a href="mailto:celinenguy03@gmail.com" aria-label="Email">
+                        <img src="images/emaillogo.svg" alt="Email Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Link to the external app.js file -->
+    <script src="casestudies.js"></script>
+</body>
+</html>

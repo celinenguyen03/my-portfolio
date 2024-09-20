@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="aboutme.css" />
+    <style>
+        @font-face {font-family: Clash Grotesk; src: url('ClashGrotesk_Complete/Fonts/TTF/ClashGrotesk-Variable.ttf');} 
+        p {
+            font-family: Clash Grotesk, sans-serif;
+            color: #28282B;
+        }
+        @font-face {font-family: Chillax; src: url('Chillax_Complete/Fonts/TTF/Chillax-Variable.ttf');} 
+        *:not(p) {
+            font-family: Chillax, sans-serif;
+            color: #28282B;
+        }
+    </style>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar for larger screens -->
+    <nav>
+        <a href="index.html" id="navbar__logo"><img src="images/logo.svg" alt="celine's logo"></a>
+        <a href="index.html">Works</a>
+        <a href="aboutme.html" class="active">About</a>
+        <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+    </nav>
+
+    <!-- Navigation Bar for smaller screens -->
+    <div class="navbar-mobile">
+        <!-- Logo on the left -->
+        <a href="index.html" class="navbar-bubble logo">
+            <img src="images/logo.svg" alt="celine's logo">
+        </a>
+
+        <!-- Hamburger menu on the right -->
+        <div class="navbar-bubble hamburger-menu">
+            <img src="images/hamburger menu.svg" alt="Menu">
+        </div>
+    </div>
+
+    <!-- Dropdown menu for mobile (Initially hidden) -->
+    <div class="nav-links-mobile">
+        <div class="works-bubble">
+            <a href="index.html">Works</a>
+        </div>
+        <div class="about-bubble">
+            <a href="aboutme.html">About</a>
+        </div>
+        <div class="resume-bubble">
+            <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+        </div>
+    </div>
+
+    <div class="about-section">
+        <!-- Left Side: Image and SVGs -->
+        <div class="about-image-container">
+            <div class="image-wrapper">
+                <!-- Profile Image -->
+                <img src="images/about_me/celine headshot in la.png" alt="Profile Picture" style='background-color:transparent;' class="profile-image">
+                <!-- Knuckles SVG -->
+                <img src="images/about_me/knuckles.svg" alt="Knuckles SVG" class="knuckles-svg">
+                <!-- Sonic SVG (Initially hidden) -->
+                <img src="images/about_me/sonic.svg" alt="Sonic Icon" class="sonic-svg" id="sonic-svg" style="display: none;">
+                <!-- Corner SVG -->
+                <img src="images/about_me/corner.svg" alt="Corner SVG" class="corner-svg">
+            </div>
+        </div>
+    
+        <!-- Right Side: Text Content -->
+        <div class="about-text-container">
+            <h1>Fun facts about me</h1>
+            <p>👩‍💻 I'm currently designing products and creative assets as a freelancer. Previously, I've worked on TecoAdmin at Inspirame and the FarRed project at UCSD Design Lab, more specifically the DigiHealth Lab founded by Professor Edward Wang.</p>
+            <p>🤓 I originally entered my undergrad as a computer science major but quickly realized that I wanted to be the bridge that connected problem to solution. I began shifting gears towards UX, and after a few projects and opportunities, I became immersed in the art of problem solving.</p>
+            <p>✏️ I design for everyone in mind. While it is important to design for our users, I also like to think of the team! I make sure that my designs are sharable, and you can read about how I do so here in my <a href="https://medium.com/@celinelynguyen/the-magic-of-8pt-grid-system-in-design-and-development-33ba4d9c07ea" target="_blank" class="my-article">article about the 8 pt grid system</a>.</p>
+            <p>📸 In my spare time, you'll either find me traveling to new places, chowing down on my latest food finds, or playing my favorite Mario and Sonic games!</p>
+            <!-- Scroll Down Arrow -->
+            <a class="scroll-down-arrow">
+                <img src="images/scrolldown.svg" alt="Scroll Down">
+            </a>
+        </div>
+        
+    </div>
+
+    <div class="photo-section">
+        
+        <img src="images/about_me/hakone shrine.jpg" class="photo" alt="Hakone Shrine" data-speed="0.8">
+        <img src="images/about_me/cherry.svg" class="cherry-svg" alt="Cherry Blossom" data-speed="2.0">
+        <img src="images/about_me/hakone park.jpg" class="photo" alt="Hakone Park" data-speed="1.2">
+        <img src="images/about_me/cherry.svg" class="cherry-svg" alt="Cherry Blossom" data-speed="0.6">
+        <img src="images/about_me/hakone mountain.jpg" class="photo" alt="Hakone Mountain" data-speed="0.4">
+        <img src="images/about_me/vending machines.jpg" class="photo" alt="Vending Machine" data-speed="1.6">
+        <img src="images/about_me/buddhist shrine.jpg" class="photo" alt="Buddhist Shrine" data-speed="0.8">
+        <img src="images/about_me/cherry.svg" class="cherry-svg" alt="Cherry Blossom" data-speed="0.2">
+        <img src="images/about_me/mt fuji.jpg" class="photo" alt="Mt Fuji" data-speed="1.2">
+        <img src="images/about_me/rural tokyo.jpg" class="photo" alt="Rural Tokyo" data-speed="1.4">
+        <img src="images/about_me/cherry.svg" class="cherry-svg" alt="Cherry Blossom" data-speed="1.2">
+        <img src="images/about_me/turtle pond.jpg" class="photo" alt="Turtle Pond" data-speed="1.6">
+        <img src="images/about_me/tokyo tower sunset.jpg" class="photo" alt="Tokyo Tower Sunset" data-speed="1.2">
+        <img src="images/about_me/cherry.svg" class="cherry-svg" alt="Cherry Blossom" >
+        <div class="gallery-text">Gallery</div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div id="backToTop-container">
+        <button id="backToTop">back to the top</button>
+
+        <!-- SVG Bubble Container for the Button -->
+        <div id="button-bubble-container">
+            <img class="button-left-bubble" src="images/bluebubble1.svg" alt="Bubble Left">
+            <img class="button-left-bubble" src="images/orangebubble1.svg" alt="Bubble Left">
+            <img class="button-left-bubble" src="images/pinkbubble1.svg" alt="Bubble Left">
+
+            <img class="button-right-bubble" src="images/orangebubble1.svg" alt="Bubble Right">
+            <img class="button-right-bubble" src="images/pinkbubble1.svg" alt="Bubble Right">
+            <img class="button-right-bubble" src="images/bluebubble1.svg" alt="Bubble Right">
+        </div>
+    </div>
+
+    <footer>
+        <hr> <!-- Horizontal line at the top -->
+    
+        <div class="footer-container">
+            <!-- Left Section: Designed and coded by -->
+            <div class="left-footer">
+                <p>designed and coded by celine nguyen</p>
+            </div>
+    
+            <!-- Center Section: Contact me and icons -->
+            <div class="center-footer">
+                <h1>contact me!</h1>
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/celine-nguyen-154291229/" target="_blank" aria-label="LinkedIn">
+                        <img src="images/linkedinlogo.svg" alt="LinkedIn Icon">
+                    </a>
+                    <a href="mailto:celinenguy03@gmail.com" aria-label="Email">
+                        <img src="images/emaillogo.svg" alt="Email Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to the external app.js file -->
+    <script src="aboutme.js"></script>
+
+</body>
+</html>

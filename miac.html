@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aimer Case Study</title>
+    <link rel="stylesheet" href="casestudies.css" />
+    <style>
+        @font-face {font-family: Clash Grotesk; src: url('ClashGrotesk_Complete/Fonts/TTF/ClashGrotesk-Variable.ttf');} 
+        p {
+            font-family: Clash Grotesk, sans-serif;
+            color: #28282B;
+        }
+        @font-face {font-family: Chillax; src: url('Chillax_Complete/Fonts/TTF/Chillax-Variable.ttf');} 
+        *:not(p) {
+            font-family: Chillax, sans-serif;
+            color: #28282B;
+        }
+    </style>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar for larger screens -->
+    <nav>
+        <a href="index.html" id="navbar__logo"><img src="images/logo.svg" alt="celine's logo"></a>
+        <a href="index.html">Works</a>
+        <a href="aboutme.html">About</a>
+        <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+    </nav>
+
+    <!-- Navigation Bar for smaller screens -->
+    <div class="navbar-mobile">
+        <!-- Logo on the left -->
+        <a href="index.html" class="navbar-bubble logo">
+            <img src="images/logo.svg" alt="celine's logo">
+        </a>
+
+        <!-- Hamburger menu on the right -->
+        <div class="navbar-bubble hamburger-menu">
+            <img src="images/hamburger menu.svg" alt="Menu">
+        </div>
+    </div>
+
+    <!-- Dropdown menu for mobile (Initially hidden) -->
+    <div class="nav-links-mobile">
+        <div class="works-bubble">
+            <a href="index.html">Works</a>
+        </div>
+        <div class="about-bubble">
+            <a href="aboutme.html">About</a>
+        </div>
+        <div class="resume-bubble">
+            <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+        </div>
+    </div>
+
+    <!-- Modal for Image Zoom with Bottom Nav -->
+    <div id="image-modal" class="image-modal">
+        <!-- Close Button -->
+        <span class="close-modal">&times;</span>
+
+        <!-- Image Displayed in the Modal -->
+        <img id="modal-img" class="modal-content">
+
+        <!-- Left and Right Navigation Arrows -->
+        <div class="nav-arrow left-arrow">&lt;</div>
+        <div class="nav-arrow right-arrow">&gt;</div>
+
+        <!-- Bottom Navigation Bar for Other Images -->
+        <div class="bottom-nav">
+            <div class="scrollable-nav">
+                <!-- All zoomable images will go here dynamically from JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Left Navigation Bar for Sections -->
+    <div class="left-nav">
+        <ul>
+            <li><a href="#case-info">Context</a></li>
+            <li><a href="#problem">Problem</a></li>
+            <li><a href="#objectives">Objectives</a></li>
+            <li><a href="#solution">Solution</a></li>
+            <li><a href="#sr">Research</a></li>
+            <li><a href="#ui">User Interviews</a></li>
+            <li><a href="#ca">Competitive Analysis</a></li>
+            <li><a href="#mi">Main Insights</a></li>
+            <li><a href="#site-map">Site Map</a></li>
+            <li><a href="#designs">Designs</a></li>
+            <li><a href="#ti">Testing & Iterations</a></li>
+            <li><a href="#fd">Final Designs</a></li>
+            <li><a href="#reflections">Reflections</a></li>
+        </ul>
+    </div>
+     
+    <!-- Case Study Info -->
+    <img src="images/miac_case_study/miaccoverimage.png" class="cover">
+    <section id="case-info" class="case-info section container">
+        <div class="info">
+            <h1>Team</h1>
+            <p>Adrian Tolentino</p>
+            <p>Fiona Chen</p>
+            <p>Mayra Trejo</p>
+        </div>
+        <div class="info">
+            <h1>Tools</h1>
+            <p>Figma</p>
+            <p>Discord</p>
+            <p>Google Workspace</p>
+        </div>
+        <div class="info">
+            <h1>Timeline</h1>
+            <p>December 2023 - March 2024</p>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="problem section container">
+        <h2>Problem</h2>
+        <h1>Their website is old and unused</h1>
+        <p>The Multi-Identity Art Collective (MIAC) is an organization on UCSD that aims to bring the art community together through inclusive practices and inviting events. They wanted their website to be updated and be used as a resource that members and students can look towards to locate event locations and times and get involved with the community.</p>
+        <img src="images/miac_case_study/problemhmw.png" class="case-img zoomable">
+    </section>
+
+    <section id="objectives" class="objectives section container">
+        <h2>Objectives</h2>
+        <h1>Areas of improvement for the website</h1>
+        <p></p>
+        <ul class="case-list">
+            <li>Improve site infrastructure to simplify user flows and make key information more accessible</li>
+            <li>Incorporate MIAC’s colorful branding into the visual design</li>
+            <li>Increase event attendees and members in their online communities through the website</li>
+        </ul>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="solution section container">
+        <h2>Solution</h2>
+        <h1>Fun and friendly UI with functionality</h1>
+        <div class="solution-steps">
+            <div class="gif-cont2">
+                <img src="images/miac_case_study/eventssolution.gif" alt="Step 1 Image" class="gif zoomable">
+                <img src="images/miac_case_study/sol1.png" alt="Step 1 Image" class="sol zoomable">
+            </div>
+            <div class="gif-cont2">
+                <img src="images/miac_case_study/sol2.png" alt="Step 2 Image" class="sol zoomable">
+                <img src="images/miac_case_study/contactussolution.gif" alt="Step 2 Image" class="gif zoomable">
+            </div>
+            <div class="gif-cont2">
+                <img src="images/miac_case_study/aboutussolution.gif" alt="Step 3 Image" class="gif zoomable">
+                <img src="images/miac_case_study/sol2.png" alt="Step 3 Image" class="sol zoomable">
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="sr" class="sr section container">
+        <h2>Survey Research</h2>
+        <h1>People do not know much about MIAC</h1>
+        <p>I first sent out a survey to the organization to learn about what our clients were looking to achieve with their redesign, gathering insights on their target audience and who they are as an organization. The majority of new attendees don’t know where the venues for events are since the organization was forced to go remote due to COVID-19. It is also unclear to newer members what differentiates MIAC from other art clubs.</p>
+    </section>
+
+    <section id="ui" class="ui section container">
+        <h2>User Interviews and Personas</h2>
+        <h1>Art is an intimidating environment</h1>
+        <p class="pspace">I wanted to see if I was missing any possible alternatives to a career in gaming, so I conducted user interviews with 5 skilled gamers who are currently pursuing a different career. I asked these questions to find out all the options that are out there and how they felt about the industry as a whole, which I then organized into affinity mapping.</p>
+        <p>Research Questions</p>
+        <ol class="case-list">
+            <li>How frequently do you engage in art?</li>
+            <li>Have you ever wanted to join an art community? Why or why not?</li>
+            <li>What do you usually look for in art communities?</li>
+            <li>Do you know what MIAC does?</li>
+            <li>Were you aware that MIAC had a website before this interview?</li>
+        </ol>
+        <img src="images/miac_case_study/persona.png" alt="User Persona" class="case-img sol zoomable">
+    </section>
+
+    <section id="ca" class="ca section container">
+        <h2>Competitive Analysis</h2>
+        <h1>Other organizations’ websites were easy to navigate and allowed attendees to register for events</h1>
+        <p>From the user interviews, many other organizations had simple navigation and had all the relevant resources that non-members would need. I analyzed two of the biggest organizations on campus to see how they organize their websites. I found that they made it easy to register for events as well as having clear methods of contacting them.</p>
+        <img src="images/miac_case_study/ca.png" alt="2 Big UCSD Orgs Used For Competitive Analysis" class="case-img sol zoomable">
+    </section>
+
+    <section id="mi" class="mi section container">
+        <h2>Main Insights</h2>
+        <h1>Help non-members feel invited to the community</h1>
+        <p>Based on the trends from the competitive analysis and insights from various students on campus, I’ve noticed how people find it difficult to join already established communities, especially if they do not know much about the organization. Trying to mitigate this fear that students have by providing them with the resources necessary to help guide their joining decision is an important aspect to consider when developing the website.</p>
+        <img src="images/miac_case_study/mi.png" alt="3 Main Takeaways from Research" class="case-img sol zoomable">
+    </section>
+
+    <section id="site-map" class="site-map section container">
+        <h1>Site Map</h1>
+        <img src="images/miac_case_study/sitemap.png" alt="Site Map" class="case-img sol zoomable">
+    </section>
+
+    <!-- Design Section -->
+    <section id="designs" class="designs section container">
+        <h2>Designs</h2>
+        <h1>Setbacks and consisitency</h1>
+        <p>We spent a lot of time experimenting with the style for the website while developing the website. This slowed down our design process by at least a week because we would have inconsistent designs and would have to realign ourselves on our styling. After taking the time to touch base and develop a style guide, it helped us meet our tight deadline of 10 weeks for this redesign.</p>
+        <img src="images/miac_case_study/moodboard.png" alt="Moodboard" class="case-img sol zoomable">
+    </section>
+
+    <section id="ti" class="ti section container">
+        <h2>Testing and Improvements</h2>
+        <h1>2 major design changes</h1>
+        <p>Based on various feedback from our TAs, I continually iterated over my screens over the span of 2 weeks with 2 major improvements:</p>
+        <img src="images/miac_case_study/ti1.png" alt="Design Change 1" class="case-img sol zoomable">
+        <img src="images/miac_case_study/ti2.png" alt="Design Change 2" class="case-img sol zoomable">
+    </section>
+
+    <section id="fd" class="fd section container">
+        <h2>Final Designs</h2>
+        <h1>Final Screens</h1>
+        <div class="carousel-container">
+            <div class="mySlides fade">
+                <img src="images/miac_case_study/ss1.png" class="case-img sol zoomable" alt="Slide 1">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/miac_case_study/ss2.png" class="case-img sol zoomable" alt="Slide 2">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/miac_case_study/ss3.png" class="case-img sol zoomable" alt="Slide 3">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/miac_case_study/ss4.png" class="case-img sol zoomable" alt="Slide 4">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/miac_case_study/ss5.png" class="case-img sol zoomable" alt="Slide 5">
+            </div>
+    
+            <!-- Left and right arrows -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+            <!-- Dots -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Reflections Section -->
+    <section id="reflections" class="final-reflections section container">
+        <h2>Reflections</h2>
+        <h1>Final Reflections and future edits</h1>
+        <p class="pspace">This was my first reaching out to a client and offering to redesign their website. It was a challenging experience that taught me a lot about how to work with outside clients and making sure that their needs are met. With that being said, here are some things I would’ve done differently:</p>
+        <ol class="case-list">
+            <li><strong>Before you design with a team, think of the constraints and follow the same design system.</strong> When we started the actual designing process, we would discuss a lot of various ideas we had for the website, but never 100% settled on how we were going to do so. This led to us having to spend extra time on providing feedback on correcting inconsistency with our designs over the actual designs itself.</li>
+            <li><strong>Focus on functionality first, then make it pretty.</strong> While the UI is a very important part of the user experience, making sure that the designs include all the necessary components like the events page lacking an add to calendar function initially should be the priority. Going forward, I would spend more time thinking about the use cases.</li>
+            <li><strong>Deadlines should guide your decision making.</strong> I didn’t have enough time at the end of the contract to iterate over the designs as much as I would’ve like to. I spent a majority of my time making sure I was understanding all of the needs for the website that when it came time to design, we were on a time crunch. In the future, I need to focus on allocating time better so that no part of the design process gets skimped on.</li>
+        </ol>
+        <img src="images/miac_case_study/miacteam.png" class="case-img sol zoomable" alt="My Design Team">
+    </section>
+    <section class="finisher section container">
+        <h1>Thank you so much for reading! 😁</h1>
+        <h1 class="thin">For more work inquiries or to have a coffee chat, please email me at <a href="mailto:celinenguy03@gmail.com">celinenguy03@gmail.com</a>! 🍵</h1>
+    </section>
+
+    <!-- You May Also Like Section -->
+    <section class="you-may-like section container">
+        <h1>You May Also Like...</h1>
+        <div class="related-links">
+            <div class="related-item">
+                <a href="aimer.html"> <!-- Link to Aimer case study -->
+                    <img src="images/aimer link.png" alt="Aimer App" class="case-img sol">
+                </a>
+            </div>
+            <div class="related-item">
+                <a href="dlab.html"> <!-- Link to Design Lab case study -->
+                    <img src="images/dlab link.png" alt="Design Lab Instruction Set" class="case-img sol">
+                </a>
+            </div>
+            <div class="related-item">
+                <a href="inspirame.html"> <!-- Link to Inspirame case study -->
+                    <img src="images/inspirame link.png" alt="Inspirame Table Management" class="case-img sol">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button Container with Bubble Container -->
+    <div id="backToTop-container">
+        <button id="backToTop">back to the top</button>
+
+        <!-- SVG Bubble Container for the Button -->
+        <div id="button-bubble-container">
+            <img class="button-left-bubble" src="images/bluebubble1.svg" alt="Bubble Left">
+            <img class="button-left-bubble" src="images/orangebubble1.svg" alt="Bubble Left">
+            <img class="button-left-bubble" src="images/pinkbubble1.svg" alt="Bubble Left">
+
+            <img class="button-right-bubble" src="images/orangebubble1.svg" alt="Bubble Right">
+            <img class="button-right-bubble" src="images/pinkbubble1.svg" alt="Bubble Right">
+            <img class="button-right-bubble" src="images/bluebubble1.svg" alt="Bubble Right">
+        </div>
+    </div>
+
+    <footer>
+        <hr> <!-- Horizontal line at the top -->
+    
+        <div class="footer-container">
+            <!-- Left Section: Designed and coded by -->
+            <div class="left-footer">
+                <p>designed and coded by celine nguyen</p>
+            </div>
+    
+            <!-- Center Section: Contact me and icons -->
+            <div class="center-footer">
+                <h1>contact me!</h1>
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/celine-nguyen-154291229/" target="_blank" aria-label="LinkedIn">
+                        <img src="images/linkedinlogo.svg" alt="LinkedIn Icon">
+                    </a>
+                    <a href="mailto:celinenguy03@gmail.com" aria-label="Email">
+                        <img src="images/emaillogo.svg" alt="Email Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Link to the external app.js file -->
+    <script src="casestudies.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celine's Portfolio Homepage</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        @font-face {font-family: Clash Grotesk; src: url('ClashGrotesk_Complete/Fonts/TTF/ClashGrotesk-Variable.ttf');} 
+        p {
+            font-family: Clash Grotesk, sans-serif;
+            color: #28282B;
+        }
+        @font-face {font-family: Chillax; src: url('Chillax_Complete/Fonts/TTF/Chillax-Variable.ttf');} 
+        *:not(p) {
+            font-family: Chillax, sans-serif;
+            color: #28282B;
+        }
+    </style>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar for larger screens -->
+    <nav>
+        <a href="index.html" id="navbar__logo"><img src="images/logo.svg" alt="celine's logo"></a>
+        <a href="index.html" class="active">Works</a>
+        <a href="aboutme.html">About</a>
+        <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+    </nav>
+
+    <!-- Navigation Bar for smaller screens -->
+    <div class="navbar-mobile">
+        <!-- Logo on the left -->
+        <a href="index.html" class="navbar-bubble logo">
+            <img src="images/logo.svg" alt="celine's logo">
+        </a>
+
+        <!-- Hamburger menu on the right -->
+        <div class="navbar-bubble hamburger-menu">
+            <img src="images/hamburger menu.svg" alt="Menu">
+        </div>
+    </div>
+
+    <!-- Dropdown menu for mobile (Initially hidden) -->
+    <div class="nav-links-mobile">
+        <div class="works-bubble">
+            <a href="index.html">Works</a>
+        </div>
+        <div class="about-bubble">
+            <a href="aboutme.html">About</a>
+        </div>
+        <div class="resume-bubble">
+            <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+        </div>
+    </div>
+
+    <div class="hero-section">
+
+    <!-- Bubbles -->
+        <div class="bubbles">
+            <img class="ob1" src="images/orangebubble1.svg" alt="tiny orange bubble on the left"/>
+            <img class="pb1" src="images/pinkbubble1.svg" alt="medium pink bubble on the left"/>
+            <img class="bb1" src="images/bluebubble1.svg" alt="medium blue bubble in the middle"/>
+            <img class="ob2" src="images/orangebubble2.svg" alt="big orange bubble on the right"/>
+            <img class="pb2" src="images/pinkbubble2.svg" alt="big pink bubble on the right"/>
+            <img class="bb2" src="images/bluebubble2.svg" alt="medium blue bubble on the right"/>
+        
+            <!-- Hero Text -->
+            <div class="hero-text">
+                <h1 id="my-name">hi i'm celine</h1>
+                <p id="sent-1">product designer based in california.</p>
+                <p id="sent-2">previously at ucsd design lab and inspirame.</p>
+                <a class="chat" href="https://www.linkedin.com/in/celine-nguyen-154291229/" target="_blank">
+                    <div class="pink"></div>
+                    <span>let's chat!</span>
+                </a>
+            </div>
+        </div>
+        <!-- Scroll-down Arrow -->
+        <a class="scroll-down-arrow">
+            <img src="images/scrolldown.svg" alt="Scroll Down">
+        </a>
+    </div>
+    <div class="works">
+        <div class="works-top">
+            <h1 id="works-title">works</h1>
+            <div class="svg-container">
+                <img class="burst-svg" src="images/oceanball.svg" alt="SVG 1">
+                <img class="burst-svg" src="images/sunsetzz.svg" alt="SVG 2">
+                <img class="burst-svg" src="images/llstar.svg" alt="SVG 3">
+                <img class="burst-svg" src="images/skydivot.svg" alt="SVG 4">
+            </div>
+        </div>
+    
+        <div class="works-container">
+            <!-- Aimer Case Study -->
+            <a href="aimer.html" class="card-link">
+                <div class="work-card">
+                    <img src="images/aimer card.png" alt="Aimer Gaming Career Builder" class="work-image">
+                    <div class="work-content">
+                        <h2>Aimer Gaming Career Builder</h2>
+                        <p>Build a sustainable career in gaming by offering personalized goals and revenue tracking</p>
+                        <span class="work-date">2024</span>
+                    </div>
+                </div>
+            </a>
+    
+            <!-- Card 2 -->
+            <a href="miac.html" class="card-link">
+                <div class="work-card">
+                    <img src="images/miac card.png" alt="Multi-Identity Art Collective Website" class="work-image">
+                    <div class="work-content">
+                        <h2>Multi-Identity Art Collective Website</h2>
+                        <p>Refresh the art collective's brand to promote their events and mission goals</p>
+                        <span class="work-date">2023-2024</span>
+                    </div>
+                </div>
+            </a>
+    
+            <!-- Card 3 -->
+            <a href="dlab.html" class="card-link">
+                <div class="work-card">
+                    <img src="images/dlab card.png" alt="UCSD Design Lab Eyepiece Building Instruction Set" class="work-image">
+                    <div class="work-content">
+                        <h2>UCSD Design Lab Eyepiece Building Instruction Set</h2>
+                        <p>Offer an at-home method for users to test for Alzheimer’s disease</p>
+                        <span class="work-date">2023-2024</span>
+                    </div>
+                </div>
+            </a>
+    
+            <!-- Card 4 -->
+            <a href="inspirame.html" class="card-link">
+                <div class="work-card">
+                    <img src="images/tecoadmin card.png" alt="TecoAdmin Table Management" class="work-image">
+                    <div class="work-content">
+                        <h2>TecoAdmin Agenda and Table Management</h2>
+                        <p>Organize important tasks and deadlines for school administrators and business partners</p>
+                        <span class="work-date">2023</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <!-- Back to Top Button Container with Bubble Container -->
+        <div id="backToTop-container">
+            <button id="backToTop">back to the top</button>
+
+            <!-- SVG Bubble Container for the Button -->
+            <div id="button-bubble-container">
+                <img class="button-left-bubble" src="images/bluebubble1.svg" alt="Bubble Left">
+                <img class="button-left-bubble" src="images/orangebubble1.svg" alt="Bubble Left">
+                <img class="button-left-bubble" src="images/pinkbubble1.svg" alt="Bubble Left">
+
+                <img class="button-right-bubble" src="images/orangebubble1.svg" alt="Bubble Right">
+                <img class="button-right-bubble" src="images/pinkbubble1.svg" alt="Bubble Right">
+                <img class="button-right-bubble" src="images/bluebubble1.svg" alt="Bubble Right">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <hr> <!-- Horizontal line at the top -->
+    
+        <div class="footer-container">
+            <!-- Left Section: Designed and coded by -->
+            <div class="left-footer">
+                <p>designed and coded by celine nguyen</p>
+            </div>
+    
+            <!-- Center Section: Contact me and icons -->
+            <div class="center-footer">
+                <h1>contact me!</h1>
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/celine-nguyen-154291229/" target="_blank" aria-label="LinkedIn">
+                        <img src="images/linkedinlogo.svg" alt="LinkedIn Icon">
+                    </a>
+                    <a href="mailto:celinenguy03@gmail.com" aria-label="Email">
+                        <img src="images/emaillogo.svg" alt="Email Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Link to the external app.js file -->
+    <script src="app.js"></script>
+</body>
+</html>

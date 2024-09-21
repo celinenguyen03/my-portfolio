@@ -8,7 +8,7 @@
 body {
     background: #fff;
     overflow-x: hidden;
-
+    width: 100%;
 }
 
 /* Base Font Size */
@@ -417,7 +417,7 @@ span {
 }
 
 @media (max-width: 480px) {
-    .bb2, .pb1 {
+    .pb1 {
         display: block;
     }
     .bb1, .pb2 {

@@ -30,9 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ----- Word Rising -----
     const myName = new SplitType('#my-name');
-    const sent1 = new SplitType('#sent-1');
-    const sent2 = new SplitType('#sent-2');
-
     gsap.to('.char', {
         y: 0,
         stagger: 0.02,
@@ -89,6 +86,17 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener("mouseleave", ()=>{
         hoverTL.reverse();
     })
+
+    // Rising animation for paragraph
+    const heroParagraph1 = document.querySelector('#sent-1');
+
+    gsap.from(heroParagraph1, {
+        y: 50,          // Move from 50px below
+        opacity: 0,     // Start invisible
+        duration: 1.5,  // Duration of the animation
+        delay: 0.5,     // Slight delay after the heading
+        ease: 'power2.out' // Easing for smooth motion
+    });
     
     // Select the chat button
     const chatButton = document.querySelector('.chat');

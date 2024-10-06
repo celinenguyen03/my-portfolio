@@ -223,6 +223,10 @@ nav a.active::after {
     justify-content: center;
 }
 
+.about-text-container b {
+    font-weight: 600;
+}
+
 .about-image-container {
     flex: 0 1 45%;
     display: flex;

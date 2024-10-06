@@ -71,12 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     );
 
-    // Select the "Fun facts about me" heading and individual characters
-    const funFactsHeading = document.querySelector('.about-text-container h1');
-    const funFactsChars = document.querySelectorAll('.about-text-container h1 .char');
+    // Select all the "Fun facts about me" headings and individual characters
+    const funFactsHeadings = document.querySelectorAll('.about-text-container h1');
 
     // Function to apply random colors to each letter on hover
-    function randomizeColorsForFunFacts() {
+    function randomizeColorsForFunFacts(heading) {
+        const funFactsChars = heading.querySelectorAll('.char'); // Get the characters in the hovered h1
         funFactsChars.forEach(char => {
             gsap.to(char, {
                 color: gsap.utils.random(colorsLightMode), // Randomly pick a light mode color
@@ -85,16 +85,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Hover Events for the "Fun facts about me" heading
-    funFactsHeading.addEventListener('mouseenter', () => {
-        randomizeColorsForFunFacts(); // Apply random colors when the mouse enters
-    });
-
-    funFactsHeading.addEventListener('mouseleave', () => {
+    // Function to reset the colors when hover leaves
+    function resetColorsForFunFacts(heading) {
+        const funFactsChars = heading.querySelectorAll('.char'); // Get the characters in the hovered h1
         gsap.to(funFactsChars, {
             color: '#28282B', // Reset the letters to the original dark color
             duration: 0.2 // Smooth transition back to the original color
         });
+    }
+
+    // Apply event listeners to each heading
+    funFactsHeadings.forEach(heading => {
+        heading.addEventListener('mouseenter', () => randomizeColorsForFunFacts(heading));
+        heading.addEventListener('mouseleave', () => resetColorsForFunFacts(heading));
     });
 
 

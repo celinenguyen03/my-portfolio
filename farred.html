@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aimer Case Study</title>
+    <link rel="stylesheet" href="casestudies.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico?">
+    <style>
+        @font-face {font-family: Clash Grotesk; src: url('ClashGrotesk_Complete/Fonts/TTF/ClashGrotesk-Variable.ttf');} 
+        p {
+            font-family: Clash Grotesk, sans-serif;
+            color: #28282B;
+        }
+        @font-face {font-family: Chillax; src: url('Chillax_Complete/Fonts/TTF/Chillax-Variable.ttf');} 
+        *:not(p) {
+            font-family: Chillax, sans-serif;
+            color: #28282B;
+        }
+    </style>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar for larger screens -->
+    <nav>
+        <a href="index.html" id="navbar__logo"><img src="images/logo.svg" alt="celine's logo"></a>
+        <a href="index.html">Works</a>
+        <a href="aboutme.html">About</a>
+        <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+    </nav>
+
+    <!-- Navigation Bar for smaller screens -->
+    <div class="navbar-mobile">
+        <!-- Logo on the left -->
+        <a href="index.html" class="navbar-bubble logo">
+            <img src="images/logo.svg" alt="celine's logo">
+        </a>
+
+        <!-- Hamburger menu on the right -->
+        <div class="navbar-bubble hamburger-menu">
+            <img src="images/hamburger menu.svg" alt="Menu">
+        </div>
+    </div>
+
+    <!-- Dropdown menu for mobile (Initially hidden) -->
+    <div class="nav-links-mobile">
+        <div class="works-bubble">
+            <a href="index.html">Works</a>
+        </div>
+        <div class="about-bubble">
+            <a href="aboutme.html">About</a>
+        </div>
+        <div class="resume-bubble">
+            <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+        </div>
+    </div>
+
+    <!-- Modal for Image Zoom with Bottom Nav -->
+    <div id="image-modal" class="image-modal">
+        <!-- Close Button -->
+        <span class="close-modal">&times;</span>
+
+        <!-- Image Displayed in the Modal -->
+        <img id="modal-img" class="modal-content">
+
+        <!-- Left and Right Navigation Arrows -->
+        <div class="nav-arrow left-arrow">&lt;</div>
+        <div class="nav-arrow right-arrow">&gt;</div>
+
+        <!-- Bottom Navigation Bar for Other Images -->
+        <div class="bottom-nav">
+            <div class="scrollable-nav">
+                <!-- All zoomable images will go here dynamically from JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Left Navigation Bar for Sections -->
+    <div class="left-nav">
+        <ul>
+            <li><a href="#bg">Background</a></li>
+            <li><a href="#methods">Methods</a></li>
+            <li><a href="#ci">Insights</a></li>
+            <li><a href="#ri">Impact</a></li>
+            <li><a href="#reflections">Reflections</a></li>
+        </ul>
+    </div>
+     
+    <!-- Case Study Info -->
+    <section class="case-info container">
+        <div class="info">
+            <h1>FarRed Usability Rapid Research</h1>
+            <h2 class="first">@ UCSD Design Lab</h2>
+            <p>This is a usability testing I led at UCSD Design Lab. The high level objective of the study was to test specific design solutions and evaluate the effectiveness of the prototype pupillometer, thus to iterate over the current designs. Some information is removed or modified due to confidentiality.</p>
+            <p>This project showcases my analytical thinking, where I used both quantitative and qualitative data from usability testing to derive actionable insights, ensuring that the design improvements were grounded in real user feedback and needs.</p>
+            <p>Disclaimer: The visuals you see on this page are coming from my final UXR report. It is for showcasing my research reporting ability.</p>
+        </div>
+    </section>
+
+    <!-- Background and Goals -->
+    <section id="bg" class="bg section container">
+        <div>
+            <h2>Background and Goals</h2>
+            <p>The lab wanted to test the current designs to determine some areas for improvement. Some key goals we have:</p>
+            <p><b>Usability Research Goals</b></p>
+            <ol class="case-list">
+                <li>Evaluate the effectiveness of the prototype pupillometer in real-world use cases, ensuring it meets users' needs for accuracy and ease of use.</li>
+                <li>Identify usability issues or pain points in the current design to guide necessary design iterations and improvements.</li>
+                <li>Assess user satisfaction with the device's interface and interaction design to ensure that it is intuitive and accessible for diverse users.</li>
+            </ol>
+            <p><b>Design Iteration Goals</b></p>
+            <ol class="case-list">
+                <li>Test specific design elements to determine whether they improve the user experience, particularly in terms of data collection accuracy and interaction speed.</li>
+                <li>Gather feedback on the overall flow of the pupillometer's user interface to refine the design based on real user interactions.</li>
+                <li>Identify areas for improvement in the current design iteration that could enhance usability in future versions of the product.</li>
+            </ol>
+            <p><b>Behavioral Data Goals</b></p>
+            <ol class="case-list">
+                <li>Measure user error rates and the ease with which users can complete key tasks, such as setting up the device and reading results, to optimize the design for efficiency.</li>
+                <li>Observe behavioral patterns in how users interact with the device to uncover unspoken difficulties or preferences that could inform future design iterations.</li>
+                <li>Collect quantitative data on task completion times and accuracy to identify where improvements can reduce user frustration and increase reliability.</li>
+            </ol>
+        </div>
+        <div>
+            <img src="images/Dlab/Figure 1 for Dlab.png" class="case-img zoomable">
+        </div>
+    </section>
+
+    <!-- Methods -->
+    <section id="methods" class="methods section container">
+        <div>
+            <h2>Methods</h2>
+            <p>To achieve these goals, I conducted a <b>usability study</b> involving 10 participants to evaluate the effectiveness of the instruction set for assembling the prototype pupillometer. The study consisted of participants completing the eyepiece assembly task while I observed and collected qualitative data on their interactions, specifically focusing on their reliance on the instruction set versus the video tutorial. Additionally, feedback was gathered on the ease of attachment of the eyepiece to the phone, as well as the clarity of the visual cues and instructions provided.</p>
+        </div>
+        <div>
+            <img src="images/Dlab/Figure 2 for Dlab.png" class="case-img zoomable">
+        </div>
+    </section>
+
+    <!-- Crucial Insights -->
+    <section id="ci" class="ci section container">
+        <div>
+            <h2>Crucial Insights</h2>
+            <p><b>The most critical finding was that eight out of ten participants heavily relied on the video tutorial rather than the instruction set, pointing to a lack of clarity in the written instructions. The instruction set lacked clear visual cues and used ambiguous language, making the video the preferred method of guidance.</b></p>
+            <p>While most participants found the labeling and creasing of the eyepiece helpful, three users struggled with inserting a key component due to its dexterity demands. Participants reported that key steps in the instruction set were missing, forcing them to rely on external visuals for completion.</p>
+            <p>Attaching the eyepiece to the phone was generally easier, but six participants were confused about aligning the eyepiece with the camera, indicating a need for better alignment cues. Additionally, the completion bar was misunderstood, with most users viewing it as a notifier rather than an interactive tool.</p>
+            <p>Overall, the current design of the instruction set was ineffective at providing clear guidance, leading to a heavy reliance on the video tutorial. Without improvements to visual cues, detailed steps, and clearer language, users will continue to struggle with the self-assembly process.</p>
+            <p><b>For additional findings and learnings, please contact celinenguy03@gmail.com.</b></p>
+        </div>
+        <div>
+            <img src="images/Dlab/Figure 3 for Dlab.png" class="case-img zoomable">
+        </div>
+    </section>
+
+    <!-- Research Impact -->
+    <section id="ri" class="ri section container">
+        <div>
+            <h2>Design Impact</h2>
+            <p><b>Design Impact</b></p>
+            <ul class="case-list">
+                <li>Refined the design of the instruction set by identifying key usability issues, leading to improved clarity and more intuitive visual cues for the assembly process.</li>
+                <li>Research findings directly influenced the redesign of the pupillometer’s instructions, ensuring a more user-friendly experience that reduced reliance on external video tutorials.</li>
+            </ul>
+            <p><b>Stakeholder Collaboration Impact</b></p>
+            <ul class="case-list">
+                <li>Facilitated collaboration between the design and engineering teams, ensuring research insights were effectively incorporated into the development process to improve the usability of the device.</li>
+                <li>Established the usability testing as a crucial feedback loop for cross-functional teams, reinforcing the importance of user-centered design practices.</li>
+            </ul>
+            <p><b>Product Impact</b></p>
+            <ul class="case-list">
+                <li>Research insights revealed a critical gap in the clarity of the instruction set, leading to a shift in design priorities focused on reducing user dependency on video tutorials.</li>
+                <li>Improved the product’s usability by identifying areas where step-by-step instructions and visual markers could make the assembly process more intuitive, paving the way for a smoother user experience in future iterations.</li>
+            </ul>
+        </div>
+        <div>
+            <img src="images/Dlab/Figure 4 for Dlab.png" class="case-img zoomable">
+        </div>
+    </section>
+
+    <!-- Reflections -->
+    <section id="reflections" class="reflections section container">
+        <div>
+            <h2>Reflections</h2>
+            <ul class="case-list">
+                <li>Clarity in instructions is key—users will default to external guidance when the provided materials are unclear. </li>
+                <li>Finding participants for studies are difficult. A lot of the participants had similar demographics, so it is important to note how those affect your data.</li>
+                <li>Involving stakeholders early in the process ensures design improvements are implemented effectively and quickly. </li>
+                <li>Always adapt testing methods to the specific needs of the product and its users.</li>
+            </ul>
+        </div>
+        <div>
+            <img src="images/Dlab/Figure 5 for Dlab.png" class="case-img zoomable">
+        </div>
+    </section>
+    
+    <section class="finisher container">
+        <h2>Thank you so much for reading! 😁</h2>
+        <h2 class="thin">For more work inquiries or to have a coffee chat, please email me at <a href="mailto:celinenguy03@gmail.com">celinenguy03@gmail.com</a>! 🍵</h2>
+    </section>
+
+    <!-- You May Also Like Section -->
+    <section class="you-may-like container">
+        <h1>You May Also Like...</h1>
+        <div class="related-links">
+            <div class="related-item">
+                <a href="bones.html">
+                    <img src="images/Bones Beneath Cover Image.png" alt="Bones Beneath" class="case-img sol">
+                </a>
+            </div>
+            <div class="related-item">
+                <a href="tecoadmin.html">
+                    <img src="images/TecoAdmin Data Cover Image.png" alt="TecoAdmin" class="case-img sol">
+                </a>
+            </div>
+            <div class="related-item">
+                <a href="miacweb.html">
+                    <img src="images/MIAC Website Cover Image.png" alt="MIAC" class="case-img sol">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button Container with Bubble Container -->
+    <div id="backToTop-container">
+        <button id="backToTop">back to the top</button>
+
+        <!-- SVG Bubble Container for the Button -->
+        <div id="button-bubble-container">
+            <img class="button-left-bubble" src="images/bluebubble1.svg" alt="Bubble Left">
+            <img class="button-left-bubble" src="images/orangebubble1.svg" alt="Bubble Left">
+            <img class="button-left-bubble" src="images/pinkbubble1.svg" alt="Bubble Left">
+
+            <img class="button-right-bubble" src="images/orangebubble1.svg" alt="Bubble Right">
+            <img class="button-right-bubble" src="images/pinkbubble1.svg" alt="Bubble Right">
+            <img class="button-right-bubble" src="images/bluebubble1.svg" alt="Bubble Right">
+        </div>
+    </div>
+
+    <footer>
+        <hr> <!-- Horizontal line at the top -->
+    
+        <div class="footer-container">
+            <!-- Left Section: Designed and coded by -->
+            <div class="left-footer">
+                <p>designed and coded by celine nguyen</p>
+            </div>
+    
+            <!-- Center Section: Contact me and icons -->
+            <div class="center-footer">
+                <h1>contact me!</h1>
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/celine-nguyen-154291229/" target="_blank" aria-label="LinkedIn">
+                        <img src="images/linkedinlogo.svg" alt="LinkedIn Icon">
+                    </a>
+                    <a href="mailto:celinenguy03@gmail.com" aria-label="Email">
+                        <img src="images/emaillogo.svg" alt="Email Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Link to the external app.js file -->
+    <script src="casestudies.js"></script>
+</body>
+</html>

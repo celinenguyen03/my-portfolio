@@ -14,6 +14,10 @@ html {
     font-size: 16px; /* Ensure the root font size is explicitly set to 16px */
 }
 
+b {
+    font-weight: 600;
+}
+
 img, picture, video, canvas, svg {
     display: block;
     width: 100%
@@ -29,6 +33,9 @@ img, picture, video, canvas, svg {
 
 .section {
     margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
 }
 
 /* xs */
@@ -418,22 +425,23 @@ nav a.active::after {
 }
 
 .case-info {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    margin: 64px auto;
+    margin: 128px auto 64px auto;
 }
 
-@media (max-width: 768px) {
-    .case-info {
-        grid-template-columns: 1fr; /* Change to single column */
-        gap: 24px; /* Maintain the gap between elements */
-        margin: 64px auto; /* Keep margin as it is */
+@media (max-width: 1024px) {
+    .section {
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
+}
+
+.footer-container h1 {
+    font-size: 2rem;
 }
 
 @media (max-width: 640px) {
@@ -450,6 +458,10 @@ h2 {
     font-weight: 500;
 }
 
+.first {
+    color: #F8C047;
+}
+
 p {
     margin-top: 16px;
     font-size: 1.25rem;
@@ -457,6 +469,10 @@ p {
 
 ul, ol {
     padding-left: 24px;
+}
+
+.reflections ul {
+    margin-top: 16px;
 }
 
 .case-list li {
@@ -613,7 +629,7 @@ a {
     transition: box-shadow 0.3s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .related-links {
         flex-direction: column;
         align-items: center;
@@ -676,6 +692,14 @@ a {
 
 .button-right-bubble {
     right: -40px; /* Move it relative to the right of the button */
+}
+
+.finisher {
+    margin-top: 64px;
+}
+
+.you-may-like {
+    margin-top: 64px;
 }
 
 /* Footer */

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aimer Case Study</title>
+    <link rel="stylesheet" href="casestudies.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico?">
+    <style>
+        @font-face {font-family: Clash Grotesk; src: url('ClashGrotesk_Complete/Fonts/TTF/ClashGrotesk-Variable.ttf');} 
+        p {
+            font-family: Clash Grotesk, sans-serif;
+            color: #28282B;
+        }
+        @font-face {font-family: Chillax; src: url('Chillax_Complete/Fonts/TTF/Chillax-Variable.ttf');} 
+        *:not(p) {
+            font-family: Chillax, sans-serif;
+            color: #28282B;
+        }
+    </style>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar for larger screens -->
+    <nav>
+        <a href="index.html" id="navbar__logo"><img src="images/logo.svg" alt="celine's logo"></a>
+        <a href="index.html">Works</a>
+        <a href="aboutme.html">About</a>
+        <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+    </nav>
+
+    <!-- Navigation Bar for smaller screens -->
+    <div class="navbar-mobile">
+        <!-- Logo on the left -->
+        <a href="index.html" class="navbar-bubble logo">
+            <img src="images/logo.svg" alt="celine's logo">
+        </a>
+
+        <!-- Hamburger menu on the right -->
+        <div class="navbar-bubble hamburger-menu">
+            <img src="images/hamburger menu.svg" alt="Menu">
+        </div>
+    </div>
+
+    <!-- Dropdown menu for mobile (Initially hidden) -->
+    <div class="nav-links-mobile">
+        <div class="works-bubble">
+            <a href="index.html">Works</a>
+        </div>
+        <div class="about-bubble">
+            <a href="aboutme.html">About</a>
+        </div>
+        <div class="resume-bubble">
+            <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+        </div>
+    </div>
+
+    <!-- Modal for Image Zoom with Bottom Nav -->
+    <div id="image-modal" class="image-modal">
+        <!-- Close Button -->
+        <span class="close-modal">&times;</span>
+
+        <!-- Image Displayed in the Modal -->
+        <img id="modal-img" class="modal-content">
+
+        <!-- Left and Right Navigation Arrows -->
+        <div class="nav-arrow left-arrow">&lt;</div>
+        <div class="nav-arrow right-arrow">&gt;</div>
+
+        <!-- Bottom Navigation Bar for Other Images -->
+        <div class="bottom-nav">
+            <div class="scrollable-nav">
+                <!-- All zoomable images will go here dynamically from JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Left Navigation Bar for Sections -->
+    <div class="left-nav">
+        <ul>
+            <li><a href="#bg">Background</a></li>
+            <li><a href="#methods">Methods</a></li>
+            <li><a href="#ci">Insights</a></li>
+            <li><a href="#ri">Impact</a></li>
+            <li><a href="#reflections">Reflections</a></li>
+        </ul>
+    </div>
+     
+    <!-- Case Study Info -->
+    <section class="case-info container">
+        <div class="info">
+            <h1>Bones Beneath Usability Review</h1>
+            <h2 class="first">@ Blue Herb Software</h2>
+            <p>This is an exploratory playtesting research project I led at Blue Herb Software. The high level objective of the study is to discover usability positives and issues and assess gameplay balance, thus to inform the late stage development of the game.</p>
+            <p>This project showcases my leadership skills as I spearheaded the entire user research process and led the development team to implement design changes based on research findings.</p>
+        </div>
+    </section>
+
+    <!-- Background and Goals -->
+    <section id="bg" class="bg section container">
+        <div>
+            <h2>Background and Goals</h2>
+            <p>The game developers needed evidence from research to determine key focuses for improvements before launching the game in 2025. Some key goals we have:</p>
+            <p><b>Usability Research Goals</b></p>
+            <ol class="case-list">
+                <li>Identify all usability issues that prevent players from experiencing the game as intended.</li>
+                <li>Ensure that gameplay mechanics are engaging and intuitive.</li>
+                <li>Test how clear the game’s UI elements are for players to navigate.</li>
+            </ol>
+            <p><b>Design Research Goals</b></p>
+            <ol class="case-list">
+                <li>Discover moments where players experience difficulty spikes with respect to player progression and ability.</li>
+                <li>Evaluate the balancing and scaling of game progression difficulty.</li>
+            </ol>
+        </div>
+        <div>
+            <img src="images/Bones Beneath/Figure 1 for BB.png" class="case-img zoomable">
+        </div>
+    </section>
+
+    <!-- Methods -->
+    <section id="methods" class="methods section container">
+        <div>
+            <h2>Methods</h2>
+            <p>To achieve these goals, I decided to conduct a <b>usability review</b> with 1 usability specialist, which allowed us to analyze the design intent and evaluate the system against usability guidelines, principles of usability-related fields, and the reviewer’s expertise and past experience. The review was divided into 2 <b>playtesting</b> sessions for the first half of the game and the second half of the game.</p>
+        </div>
+        <div>
+            <img src="images/Bones Beneath/Figure 2 for BB.png" class="case-img zoomable">
+        </div>
+    </section>
+
+    <!-- Crucial Insights -->
+    <section id="ci" class="ci section container">
+        <div>
+            <h2>Crucial Insights</h2>
+            <p><b>When launching the game for the first time, players are poorly onboarded onto the game’s mechanics. The current state of the game lacked a proper tutorial for the core mechanics, which ended up soft-locking players when mechanics were needed to clear early rooms.</b></p>
+            <p>During the onboarding experience, players need to effectively navigate the game world. In the beginning, key characters are revealed, game controls are familiarized, and the narrative context is shared. These help set the scene for players and prepare them for the core gameplay and progression loops.</p>
+            <p>Upon starting the game file, the player will enter a cutscene and then be given the opportunity to control the main character. Usually, the player will be prompted to continue with an action or a supporting character would guide the character through the basic mechanics of the game, either in a separate space apart from the story or in a prologue scene.</p>
+            <p>However, Bones Beneath pursued a very subtle onboarding strategy that didn’t effectively prepare users for the game’s content. It relied heavily on symbols engraved into the background. It’s hard for players to recognize symbols without prior context thus soft-locking players from clearing the content.</p>
+            <p><b>For additional findings and learnings, please contact celinenguy03@gmail.com.</b></p>
+
+        </div>
+        <div>
+            <img src="images/Bones Beneath/Figure 3 for BB.png" class="case-img zoomable">
+        </div>
+    </section>
+
+    <!-- Research Impact -->
+    <section id="ri" class="ri section container">
+        <div>
+            <h2>Research Impact</h2>
+            <p><b>Development Impact</b></p>
+            <ul class="case-list">
+                <li>Improved developer workflows by integrating research feedback early in the process, allowing for more agile responses to player needs and reducing development rework post-release.</li>
+                <li>Research findings accelerated the game’s development timeline, reducing the iteration cycle time by ensuring developers had actionable insights to work with early on.</li>
+                <li>A second research review will be conducted to validate developer changes.</li>
+            </ul>
+            <p><b>Design Impact</b></p>
+            <ul class="case-list">
+                <li>Research findings directly influenced the game’s UI design and onboarding process, resulting in a more intuitive player experience and a refined design system for future game titles.</li>
+                <li>Refined the game’s UI/UX, simplifying complex elements and making the game more accessible for new players while maintaining depth and the explorative nature of the game for experienced gamers.</li>
+            </ul>
+            <p><b>Product Impact</b></p>
+            <ul class="case-list">
+                <li>Through collaboration, developers were able to quickly relay feedback from research and quickly resolve critical bugs!</li>
+                <li>Research findings influenced the design of future game updates and enhancements, making them more engaging and player-focused.</li>
+            </ul>
+        </div>
+        <div>
+            <img src="images/Bones Beneath/Figure 4 for BB.png" class="case-img zoomable">
+        </div>
+    </section>
+
+    <!-- Reflections -->
+    <section id="reflections" class="reflections section container">
+        <div>
+            <h2>Reflections</h2>
+            <ul class="case-list">
+                <li>Adapt to the situation at hand. Running into bugs are normal, even when the game is in late-stage development.</li>
+                <li>Acknowledge limitations with data, especially if the sample size is.</li>
+                <li>When bringing up bugs, always explain how the bug arises so that developers have an easier time addressing the problem.</li>
+                <li>The more you engage stakeholders in every stage of the research process, the more they are willing to act upon your findings.</li>
+            </ul>
+        </div>
+        <div>
+            <img src="images/Bones Beneath/Figure 5 for BB.png" class="case-img zoomable">
+        </div>
+    </section>
+    
+    <section class="finisher container">
+        <h2>Thank you so much for reading! 😁</h2>
+        <h2 class="thin">For more work inquiries or to have a coffee chat, please email me at <a href="mailto:celinenguy03@gmail.com">celinenguy03@gmail.com</a>! 🍵</h2>
+    </section>
+
+    <!-- You May Also Like Section -->
+    <section class="you-may-like container">
+        <h1>You May Also Like...</h1>
+        <div class="related-links">
+            <div class="related-item">
+                <a href="tecoadmin.html">
+                    <img src="images/TecoAdmin Data Cover Image.png" alt="TecoAdmin" class="case-img sol">
+                </a>
+            </div>
+            <div class="related-item">
+                <a href="farred.html">
+                    <img src="images/FarRed Cover Image.png" alt="FarRed" class="case-img sol">
+                </a>
+            </div>
+            <div class="related-item">
+                <a href="miacweb.html">
+                    <img src="images/MIAC Website Cover Image.png" alt="MIAC" class="case-img sol">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button Container with Bubble Container -->
+    <div id="backToTop-container">
+        <button id="backToTop">back to the top</button>
+
+        <!-- SVG Bubble Container for the Button -->
+        <div id="button-bubble-container">
+            <img class="button-left-bubble" src="images/bluebubble1.svg" alt="Bubble Left">
+            <img class="button-left-bubble" src="images/orangebubble1.svg" alt="Bubble Left">
+            <img class="button-left-bubble" src="images/pinkbubble1.svg" alt="Bubble Left">
+
+            <img class="button-right-bubble" src="images/orangebubble1.svg" alt="Bubble Right">
+            <img class="button-right-bubble" src="images/pinkbubble1.svg" alt="Bubble Right">
+            <img class="button-right-bubble" src="images/bluebubble1.svg" alt="Bubble Right">
+        </div>
+    </div>
+
+    <footer>
+        <hr> <!-- Horizontal line at the top -->
+    
+        <div class="footer-container">
+            <!-- Left Section: Designed and coded by -->
+            <div class="left-footer">
+                <p>designed and coded by celine nguyen</p>
+            </div>
+    
+            <!-- Center Section: Contact me and icons -->
+            <div class="center-footer">
+                <h1>contact me!</h1>
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/celine-nguyen-154291229/" target="_blank" aria-label="LinkedIn">
+                        <img src="images/linkedinlogo.svg" alt="LinkedIn Icon">
+                    </a>
+                    <a href="mailto:celinenguy03@gmail.com" aria-label="Email">
+                        <img src="images/emaillogo.svg" alt="Email Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Link to the external app.js file -->
+    <script src="casestudies.js"></script>
+</body>
+</html>

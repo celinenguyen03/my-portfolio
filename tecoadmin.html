@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aimer Case Study</title>
+    <link rel="stylesheet" href="casestudies.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico?">
+    <style>
+        @font-face {font-family: Clash Grotesk; src: url('ClashGrotesk_Complete/Fonts/TTF/ClashGrotesk-Variable.ttf');} 
+        p {
+            font-family: Clash Grotesk, sans-serif;
+            color: #28282B;
+        }
+        @font-face {font-family: Chillax; src: url('Chillax_Complete/Fonts/TTF/Chillax-Variable.ttf');} 
+        *:not(p) {
+            font-family: Chillax, sans-serif;
+            color: #28282B;
+        }
+    </style>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar for larger screens -->
+    <nav>
+        <a href="index.html" id="navbar__logo"><img src="images/logo.svg" alt="celine's logo"></a>
+        <a href="index.html">Works</a>
+        <a href="aboutme.html">About</a>
+        <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+    </nav>
+
+    <!-- Navigation Bar for smaller screens -->
+    <div class="navbar-mobile">
+        <!-- Logo on the left -->
+        <a href="index.html" class="navbar-bubble logo">
+            <img src="images/logo.svg" alt="celine's logo">
+        </a>
+
+        <!-- Hamburger menu on the right -->
+        <div class="navbar-bubble hamburger-menu">
+            <img src="images/hamburger menu.svg" alt="Menu">
+        </div>
+    </div>
+
+    <!-- Dropdown menu for mobile (Initially hidden) -->
+    <div class="nav-links-mobile">
+        <div class="works-bubble">
+            <a href="index.html">Works</a>
+        </div>
+        <div class="about-bubble">
+            <a href="aboutme.html">About</a>
+        </div>
+        <div class="resume-bubble">
+            <a href="Celine Nguyen - Resume.pdf" target="_blank">Resume</a>
+        </div>
+    </div>
+
+    <!-- Modal for Image Zoom with Bottom Nav -->
+    <div id="image-modal" class="image-modal">
+        <!-- Close Button -->
+        <span class="close-modal">&times;</span>
+
+        <!-- Image Displayed in the Modal -->
+        <img id="modal-img" class="modal-content">
+
+        <!-- Left and Right Navigation Arrows -->
+        <div class="nav-arrow left-arrow">&lt;</div>
+        <div class="nav-arrow right-arrow">&gt;</div>
+
+        <!-- Bottom Navigation Bar for Other Images -->
+        <div class="bottom-nav">
+            <div class="scrollable-nav">
+                <!-- All zoomable images will go here dynamically from JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Left Navigation Bar for Sections -->
+    <div class="left-nav">
+        <ul>
+            <li><a href="#bg">Background</a></li>
+            <li><a href="#methods">Methods</a></li>
+            <li><a href="#ci">Insights</a></li>
+            <li><a href="#ri">Impact</a></li>
+            <li><a href="#reflections">Reflections</a></li>
+        </ul>
+    </div>
+     
+    <!-- Case Study Info -->
+    <section class="case-info container">
+        <div class="info">
+            <h1>Discovery Research for Product Opportunities</h1>
+            <h2 class="first">@ Inspirame</h2>
+            <p>This is a usability testing I led at UCSD Design Lab. The high level objective of the study was to test specific design solutions and evaluate the effectiveness of the prototype pupillometer, thus to iterate over the current designs. Some information is removed or modified due to confidentiality.</p>
+            <p>This project had the most significant impact, securing $50k in funding by providing insights that directly informed actions to address key opportunities.</p>
+            <p>Disclaimer: The visuals you see on this page are coming from my final UXR report. It is for showcasing my research reporting ability.</p>
+        </div>
+    </section>
+
+    <!-- Background and Goals -->
+    <section id="bg" class="bg section container">
+        <div>
+            <h2>Background and Goals</h2>
+            <p>The product manager wanted to conduct preliminary research on our users to determine what opportunities could we offer with our product. Some key goals we have:</p>
+            <p><b>Discovery Research Goals</b></p>
+            <ol class="case-list">
+                <li>Understand the gaps in the current market and discover areas where users face challenges that the product could address.</li>
+                <li>Investigate why users engage with certain products or services, and what drives their decisions and actions.</li>
+            </ol>
+            <p><b>Foundational Research Goals</b></p>
+            <ol class="case-list">
+                <li>Develop detailed personas based on user behaviors, demographics, and motivations to inform the design and product strategy.</li>
+                <li>Map out typical user flows and interaction patterns to identify key touchpoints, challenges, and opportunities for improving the user experience.</li>
+                <li>Derive design guidelines and principles that align with the users' needs, behaviors, and expectations, ensuring that the product is intuitive and user-friendly.</li>
+            </ol>
+        </div>
+        <div>
+            <img src="images/TA/Figure 1 for TA.png" class="case-img zoomable">
+        </div>
+    </section>
+
+    <!-- Methods -->
+    <section id="methods" class="methods section container">
+        <div>
+            <h2>Methods</h2>
+            <p>To achieve these goals, I performed <b>market research</b> on educational needs, which revealed that institutions rely heavily on data to improve their outreach and marketing campaigns and focus their efforts on areas with the highest return. From this, I then conducted a <b>UX audit</b> on the current platform, revealing issues and opportunities for improvements. Additionally, I conducted 4 <b>in-depth interviews</b> with our current industry partners, which gave detailed feedback on the current platforms and identified key opportunities.</p>
+        </div>
+        <div>
+            <img src="images/TA/Figure 2 for TA.png" class="case-img zoomable">
+        </div>
+    </section>
+
+    <!-- Crucial Insights -->
+    <section id="ci" class="ci section container">
+        <div>
+            <h2>Crucial Insights</h2>
+            <p><b>The most significant insight from the research was that users found the platform overly simplistic, lacking the necessary customization options to meet their specific needs. While the interface was easy to navigate, the limited functionality frustrated users trying to perform more complex tasks, hindering their ability to work efficiently.</b></p>
+            <p>User interviews revealed that the absence of advanced filtering and sorting options made it difficult for users to find and organize the data they needed. They expressed a need for more robust tools that would allow them to manipulate data without resorting to external solutions, which slowed down their workflow.</p>
+            <p>Additionally, the platform's rigid design restricted users from tailoring their dashboards to fit their specific workflows. Many users relied on manual workarounds to get the data views they required, indicating that the current interface failed to accommodate their needs for flexibility and efficiency.</p>
+            <p>Ultimately, the current design, while simple, lacked the depth needed to support users’ diverse tasks. Without more advanced customization features, the platform risks alienating users who require greater control over their data to perform their jobs effectively.</p>
+            <p><b>For additional findings and learnings, please contact celinenguy03@gmail.com.</b></p>
+        </div>
+        <div>
+            <img src="images/TA/Figure 3 for TA.png" class="case-img zoomable">
+        </div>
+    </section>
+
+    <!-- Research Impact -->
+    <section id="ri" class="ri section container">
+        <div>
+            <h2>Research Impact</h2>
+            <p><b>Product Impact</b></p>
+            <ul class="case-list">
+                <li>Research led to improvements in data categorization and dashboard customization, enhancing user satisfaction and productivity.</li>
+                <li>The platform’s usability increased as users could access key data faster and with fewer steps.</li>
+                <li>Addressing user pain points reduced the reliance on third-party tools for data analysis.</li>
+            </ul>
+            <p><b>Strategic Impact</b></p>
+            <ul class="case-list">
+                <li>Insights from the research guided the company’s focus on increasing reporting flexibility for users.</li>
+                <li>The company’s product strategy shifted to prioritize customization, opening doors to attract new business clients.</li>
+                <li>The findings influenced a long-term strategy to make the platform more adaptable to diverse user needs.</li>
+            </ul>
+        </div>
+        <div>
+            <img src="images/TA/Figure 4 for TA.png" class="case-img zoomable">
+        </div>
+    </section>
+
+    <!-- Reflections -->
+    <section id="reflections" class="reflections section container">
+        <div>
+            <h2>Reflections</h2>
+            <ul class="case-list">
+                <li>Addressing usability issues early prevents larger complications down the road.</li>
+                <li>Always test assumptions—what users say and what they need aren’t always the same.</li>
+                <li>The way you present findings are important. As a researcher, you need others to see value in insights that you find.</li>
+                <li>Simplicity is key in both data presentation and interface design—users value ease of use over complex features.</li>
+            </ul>
+        </div>
+        <div>
+            <img src="images/TA/Figure 5 for TA.png" class="case-img zoomable">
+        </div>
+    </section>
+    
+    <section class="finisher container">
+        <h2>Thank you so much for reading! 😁</h2>
+        <h2 class="thin">For more work inquiries or to have a coffee chat, please email me at <a href="mailto:celinenguy03@gmail.com">celinenguy03@gmail.com</a>! 🍵</h2>
+    </section>
+
+    <!-- You May Also Like Section -->
+    <section class="you-may-like container">
+        <h1>You May Also Like...</h1>
+        <div class="related-links">
+            <div class="related-item">
+                <a href="bones.html">
+                    <img src="images/Bones Beneath Cover Image.png" alt="Bones Beneath" class="case-img sol">
+                </a>
+            </div>
+            <div class="related-item">
+                <a href="farred.html">
+                    <img src="images/FarRed Cover Image.png" alt="FarRed" class="case-img sol">
+                </a>
+            </div>
+            <div class="related-item">
+                <a href="miacweb.html">
+                    <img src="images/MIAC Website Cover Image.png" alt="MIAC" class="case-img sol">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button Container with Bubble Container -->
+    <div id="backToTop-container">
+        <button id="backToTop">back to the top</button>
+
+        <!-- SVG Bubble Container for the Button -->
+        <div id="button-bubble-container">
+            <img class="button-left-bubble" src="images/bluebubble1.svg" alt="Bubble Left">
+            <img class="button-left-bubble" src="images/orangebubble1.svg" alt="Bubble Left">
+            <img class="button-left-bubble" src="images/pinkbubble1.svg" alt="Bubble Left">
+
+            <img class="button-right-bubble" src="images/orangebubble1.svg" alt="Bubble Right">
+            <img class="button-right-bubble" src="images/pinkbubble1.svg" alt="Bubble Right">
+            <img class="button-right-bubble" src="images/bluebubble1.svg" alt="Bubble Right">
+        </div>
+    </div>
+
+    <footer>
+        <hr> <!-- Horizontal line at the top -->
+    
+        <div class="footer-container">
+            <!-- Left Section: Designed and coded by -->
+            <div class="left-footer">
+                <p>designed and coded by celine nguyen</p>
+            </div>
+    
+            <!-- Center Section: Contact me and icons -->
+            <div class="center-footer">
+                <h1>contact me!</h1>
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/celine-nguyen-154291229/" target="_blank" aria-label="LinkedIn">
+                        <img src="images/linkedinlogo.svg" alt="LinkedIn Icon">
+                    </a>
+                    <a href="mailto:celinenguy03@gmail.com" aria-label="Email">
+                        <img src="images/emaillogo.svg" alt="Email Icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Link to the external app.js file -->
+    <script src="casestudies.js"></script>
+</body>
+</html>
